@@ -16,7 +16,7 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-manrope;
+  font-family: $ff-roboto;
   color: $color-default-black;
   overflow-x: hidden;
 
@@ -33,6 +33,7 @@ body {
   height: 100%;
 
   background-color: $color-default-white;
+  // font-family: $ff-manrope;
 }
 
 a {
@@ -44,6 +45,7 @@ img,
 video {
   display: block;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

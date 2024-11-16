@@ -1,16 +1,21 @@
 mixin intro()
+  -
+    const mock = [
+      {text: "Выберите<br> направление"},
+      {text: "Изучите идеи<br> путешественников"},
+      {text: "Находите тех,<br> кто похож на&#160;вас"},
+      {text: "Путешествуйте<br> вместе!"}
+    ]
+  - let i = 1
   section.intro
     .container
-      .intro__wrapper
-        h1!= "Чем дольше&#160;&#8212; тем больше!"
-        p!= "Мы&#160;считаем каждый день вместе! Проверьте, сколько вы&#160;с&#160;&#171;Пакетом&#187;, выигрывайте баллы &#171;X5&#160;Клуба&#187; и&#160;ценные призы от&#160;Ситилинк."
-        label.intro__agree
-          input.intro__checkbox.visually-hidden(type="checkbox", name="agreement1", id="agreement1-form", tabindex="-1", required)
-          span.intro__check(tabindex="0")
-          span.intro__subtext!= "Я&#160;согласен&#160;на "
-            span!= "участие в&#160;акции"
-        +btn({href: '#'}).intro__btn= "Принять участие"
-      .intro__picture.intro__picture--first
-        +picture("content", "introback", "png", 375, 480, 1440, 655, "")
-      .intro__picture.intro__picture--second
-        +picture("content", "intro", "png", 375, 423, 1440, 655, "Акция.")
+      .intro__back
+        +img("content", "introback", "png", 1440, 750)
+      .intro__cont
+        h1!= "В&#160;путешествие с&#160;крутыми попутчиками!"
+        .intro__pic
+          +pic("content", "intro", "png", 431, 640, 437, 430, 192, 255, "Путешественник.")
+        ul.intro__list
+          each item in mock
+            li.intro__item(class= `intro__item--${i}`)!= item.text
+            - i++
