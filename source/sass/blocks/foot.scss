@@ -1,0 +1,196 @@
+.foot {
+  @include flex {
+    position: relative;
+    gap: 50px;
+    width: 100vw;
+    margin: 0 0 -100px;
+    padding: 150px 0 50px;
+    overflow: hidden;
+  }
+
+  @include vp-1439 {
+
+  }
+
+  @include vp-1279 {
+
+  }
+
+  @include vp-1023 {
+
+  }
+
+  @include vp-767 {
+
+  }
+
+  @include vp-374 {
+
+  }
+
+  .container {
+    @include flex {
+      position: relative;
+      width: 100%;
+      gap: 0;
+
+      @include vp-1023 {
+
+      }
+
+      @include vp-767 {
+
+      }
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__selector {
+    @include flex {
+      gap: 10px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+}

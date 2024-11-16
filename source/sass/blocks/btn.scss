@@ -1,0 +1,27 @@
+.btn {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 20px;
+
+  color: $color-default-white;
+  background-color: $color-default-black;
+
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-300;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}

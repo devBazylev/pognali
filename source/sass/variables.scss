@@ -1,0 +1,75 @@
+// Colors
+
+// Default
+
+$color-default-black:                      #000000;
+$color-default-white:                      #ffffff;
+$color-transparent:                        rgba(255, 255, 255, 0);
+$color-accent-main:                        #2c39f2;
+$color-accent-second:                      #212121;
+
+// Project palette
+
+$color-alice-blue:                         #ecf6ff;
+$color-dodger-blue:                        #0088fe;
+$color-nero:                               #252525;
+$color-hawkes-blue:                        #d7e5fc;
+$color-snow:                               #fcfcfc;
+$color-heather:                            #bac1c7;
+$color-viking:                             #48abd3;
+$color-limeade:                            #5faf2c;
+$color-solitude:                           #f0f3f7;
+$color-fiord:                              #535b62;
+$color-nobel:                              #989898;
+$color-alice-blue-twink:                   #e3f2ff;
+$color-cornflower-blue:                    #498ae9;
+$color-international-orange:               #ff5200;
+$color-summer-sky:                         #3fa6ff;
+$color-navy-blue:                          #0077de;
+
+// Gradient
+
+$black-to-right:                           linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+
+$grad-type1:                               linear-gradient(170deg, #a6f663 -12.98%, #ffffff 99.2%);
+$grad-type2:                               linear-gradient(180deg, #c6ebdd 0%, #ffffff 100%);
+$grad-type3:                               linear-gradient(180deg, #a6f4ff 0%, #ffffff 100%);
+$grad-type4:                               linear-gradient(180deg, #dfd2f0 0%, #ffffff 100%);
+$grad-type5:                               linear-gradient(180deg, #b6e3fd 0%, #ffffff 100%);
+$grad-type6:                               linear-gradient(180deg, #fccce8 0%, #ffffff 100%);
+$grad-type7:                               linear-gradient(180deg, #c5bcff 0%, #ffffff 100%);
+$grad-type8:                               linear-gradient(109deg, #c3e3ff 0%, #c3e3ff 3.18%, #ffffff 46.8%, #ffffff 10000%);
+$grad-type9:                               linear-gradient(270deg, #363de8 1.81%, #359ff1 95.02%);
+
+// Typography
+
+$fz-default:                               16px;
+$ff-rouble:                               "Rouble", "Arial", sans-serif;
+$ff-placeholder:                          "Placeholder", "Arial", sans-serif;
+$ff-manrope:                              "Manrope", "Arial", sans-serif;
+
+// Animation
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-600:                         0.6s $tf-default;
+$trans-300:                         0.3s linear;
+$trans-100:                         0.1s linear;
+
+// Viewports
+
+$vp-320:                            320px;
+$vp-375:                            375px;
+$vp-500:                            500px;
+$vp-768:                            768px;
+$vp-1024:                           1024px;
+$vp-1280:                           1280px;
+$vp-1440:                           1440px;
+$vp-1920:                           1920px;
+
+// Retina
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
