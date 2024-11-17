@@ -1,3 +1,35 @@
 mixin way()
+  -
+    const mock = [
+      {country: "Франция", text: "Трэ бьен, манифик!", users: "12518", flag: "france", image: "way2"},
+      {country: "Чехия", text: "Закоулки старой Европы", users: "5326", flag: "czech", image: "way3"},
+      {country: "Тайланд", text: "Джунгли зовут!", users: "18321", flag: "thailand", image: "way1"},
+    ]
   section.way
     .container
+      .way__wrap
+        h2.way__title!= "Направления"
+        p.way__text!= "Мы&#160;не&#160;продаем туры и&#160;ничего не&#160;рекламируем.<br> Люди сами пишут о&#160;странах, куда хотели&#160;бы отправиться и&#160;чем можно там заняться."
+      .way__cont
+        .way__slider.swiper
+          .way__top
+            img(src=`img/sprite/way-fade.svg`, alt="")
+          .way__bottom
+            img(src=`img/sprite/way-fade.svg`, alt="")
+          .way__wrapper.swiper-wrapper
+            each item in mock
+              .way__slide.swiper-slide
+                .way__data
+                  h3.way__name!= item.country
+                  p.way__gist!= item.text
+                  .way__users
+                    svg.way__user(xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none")
+                      path(opacity="0.1" d="M8.60629 6.73941C8.60629 9.35098 10.8524 11.4762 13.6125 11.4762C16.3726 11.4762 18.6188 9.35098 18.6188 6.73941C18.6188 4.12783 16.3726 2.00256 13.6125 2.00256C10.8524 2.00256 8.60629 4.12783 8.60629 6.73941ZM22.5125 22.0026H23.625V20.9499C23.625 16.8878 20.1307 13.5815 15.8375 13.5815H11.3875C7.09329 13.5815 3.60004 16.8878 3.60004 20.9499V22.0026H22.5125Z" fill="#192144")
+                    .way__count!= item.users
+                .way__pic
+                  +pic("content", item.image, "png", 200, 140, 200, 140, 270, 110, "Фото страны.")
+                .way__flag
+                  img(src=`img/sprite/${item.flag}.svg`, width="70", height="47", alt="Флаг страны.")
+      +btn({href: 'catalog.html'}).way__btn.btn= "Показать все"
+        svg.btn__svg(xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none")
+          path(d="M11.5928 7L0.818832 13.0622V0.937822L11.5928 7Z" fill="#1d2e5b")

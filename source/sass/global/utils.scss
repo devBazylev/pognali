@@ -6,7 +6,6 @@
   min-height: 100vh;
   margin: 0 auto;
   min-height: calc(100 * var(--vh, 1vh));
-  background-color: $color-alice-blue;
 
   @include vp-1023 {
     background-color: $color-default-white;

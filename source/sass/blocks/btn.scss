@@ -8,8 +8,8 @@
   gap: 20px;
   padding: 29px 35px 27px 34px;
   border-radius: 20px;
-  background-color: $color-tints-of-pale-cornflower-blue;
-  color: $color-tints-of-catalina-blue;
+  background-color: $color-pale-cornflower-blue;
+  color: $color-catalina-blue;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -28,7 +28,7 @@
   }
 
   @include hover-focus {
-    background-color: $color-tints-of-jordy-blue;
+    background-color: $color-jordy-blue;
 
     .btn__svg {
       transform: rotate(-90deg);

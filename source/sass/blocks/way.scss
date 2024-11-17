@@ -1,20 +1,8 @@
 .way {
-  @include flex {
-    position: relative;
-    gap: 50px;
-    width: 100vw;
-    margin: 0 0 -100px;
-    padding: 150px 0 50px;
-    overflow: hidden;
-  }
-
-  @include vp-1439 {
-
-  }
-
-  @include vp-1279 {
-
-  }
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  z-index: 9;
 
   @include vp-1023 {
 
@@ -24,29 +12,225 @@
 
   }
 
-  @include vp-374 {
-
-  }
-
   .container {
-    @include flex {
+    @include grid(52%, 1fr) {
       position: relative;
+      gap: 52px;
       width: 100%;
-      gap: 0;
+      padding: 0;
 
       @include vp-1023 {
-
+        grid-template-columns: 1fr;
+        gap: 10px;
+        border-radius: 40px;
+        background-color: $color-solitude;
       }
 
       @include vp-767 {
-
+        border-radius: 30px;
       }
     }
   }
 
-  &__selector {
+  &__wrap {
     @include flex {
+      order: 1;
+      gap: 18px;
+      padding: 186px 61px 270px;
+    }
+
+    @include vp-1023 {
+      padding: 0;
+    }
+
+    @include vp-767 {
+      gap: 23px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-midnight-express-3;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    font-variant: all-small-caps;
+
+    @include vp-1023 {
+      font-size: 95px;
+    }
+
+    @include vp-767 {
+      font-size: 44px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-charcoal;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 143%;
+
+    @include vp-1023 {
+      font-size: 24px;
+      line-height: 137%;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 157%;
+    }
+  }
+
+  &__cont {
+    @include flex {
+      gap: 20px;
+      padding: 195px 41px 170px 45px;
+      border-radius: 55px;
+      background-color: $color-solitude;
+    }
+
+    @include vp-1023 {
+      padding: 0;
+      border-radius: 0;
+      background-color: unset;
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    max-height: 440px;
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__top,
+  &__bottom {
+    position: absolute;
+    width: 100%;
+    height: 81px;
+    pointer-events: none;
+    z-index: 2;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+  }
+
+  &__top {
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &__bottom {
+    bottom: 0;
+    left: 0;
+  }
+
+  &__wrapper {
+    align-items: center;
+  }
+
+  &__slide {
+    @include grid(1fr, 200px) {
       gap: 10px;
+      width: 92%;
+      padding: 0;
+      border-radius: 20px;
+      background: $color-default-white;
+      transition: width $trans-300;
+      overflow: hidden;
+      flex-grow: 0;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.30);
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  .swiper-slide-active {
+    width: 94%;
+  }
+
+  &__data {
+    @include flex {
+      gap: 4px;
+      padding: 24px 33px 20px;
+    }
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__name {
+    margin: 0;
+    color: $color-default-black;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+      font-size: 21px;
+    }
+  }
+
+  &__gist {
+    margin: 0 0 21px;
+    padding: 0;
+    color: $color-charcoal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    opacity: 0.3;
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 112.5%;
+    }
+  }
+
+  &__users {
+    @include flex(row) {
+      gap: 7px;
       padding: 0;
     }
 
@@ -59,11 +243,41 @@
     }
   }
 
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
+  &__user {
+    width: 27px;
+    height: 24px;
+    flex-shrink: 0;
+
+    @include vp-1023 {
+
     }
+
+    @include vp-767 {
+      width: 16px;
+      height: 15px;
+    }
+  }
+
+  &__count {
+    color: $color-midnight-express;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    opacity: 0.3;
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 125%;
+    }
+  }
+
+  &__pic {
+
 
     @include vp-1023 {
 
@@ -74,11 +288,15 @@
     }
   }
 
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
+  &__pic img,
+  &__flag img {
+    width: 100%;
+  }
+
+  &__flag {
+    position: absolute;
+    top: 23px;
+    right: 165px;
 
     @include vp-1023 {
 
@@ -89,101 +307,11 @@
     }
   }
 
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
-
-    @include vp-1023 {
-
-    }
-
-    @include vp-767 {
-
-    }
-  }
-
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
-
-    @include vp-1023 {
-
-    }
-
-    @include vp-767 {
-
-    }
-  }
-
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
-
-    @include vp-1023 {
-
-    }
-
-    @include vp-767 {
-
-    }
-  }
-
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
-
-    @include vp-1023 {
-
-    }
-
-    @include vp-767 {
-
-    }
-  }
-
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
-
-    @include vp-1023 {
-
-    }
-
-    @include vp-767 {
-
-    }
-  }
-
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
-
-    @include vp-1023 {
-
-    }
-
-    @include vp-767 {
-
-    }
-  }
-
-  &__selector {
-    @include flex {
-      gap: 10px;
-      padding: 0;
-    }
+  &__btn {
+    position: absolute;
+    bottom: 159px;
+    right: 273px;
+    width: 299px;
 
     @include vp-1023 {
 
