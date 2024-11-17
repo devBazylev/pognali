@@ -31,9 +31,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-
   background-color: $color-default-white;
-  // font-family: $ff-manrope;
 }
 
 a {
@@ -128,4 +126,14 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+main > *:nth-child(2n):not(:last-child) {
+  margin: -100px 0;
+  padding: 100px 0 0;
+}
+
+main > *:nth-child(2n):last-child {
+  margin: -100px 0 0;
+  padding: 100px 0 0;
 }
