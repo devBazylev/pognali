@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import {mob, tab, desk, addClassArray, cloneSlides, removeClassArray} from '../utils/util.js';
+import {mob, addClassArray, cloneSlides, removeClassArray} from '../utils/util.js';
 import {Autoplay} from 'swiper/modules';
 
 const initWay = () => {
@@ -9,10 +9,10 @@ const initWay = () => {
   const clones = [];
   let swiper = null;
 
-  cloneSlides(wrapper, slides, clones);
+  // cloneSlides(wrapper, slides, clones);
 
   const initSlider = () => {
-    if (tab.matches || desk.matches) {
+    if (!mob.matches) {
       if (swiper === null) {
         swiper = new Swiper('.way__slider', {
           modules: [Autoplay],
@@ -47,11 +47,12 @@ const initWay = () => {
   };
 
   const breakpointChecker = () => {
-    if (tab.matches || desk.matches) {
-      removeClassArray(clones, 'month__slide--none');
+    if (!mob.matches) {
+      removeClassArray(clones, 'way__slide--none');
       initSlider();
     } else {
-      addClassArray(clones, 'month__slide--none');
+      addClassArray(clones, 'way__slide--none');
+      initSlider();
     }
   };
 

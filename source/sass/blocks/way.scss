@@ -4,14 +4,6 @@
   overflow: hidden;
   z-index: 9;
 
-  @include vp-1023 {
-
-  }
-
-  @include vp-767 {
-
-  }
-
   .container {
     @include grid(52%, 1fr) {
       position: relative;
@@ -28,7 +20,9 @@
       }
 
       @include vp-767 {
+        gap: 24px;
         border-radius: 30px;
+        padding: 0 0 53px;
       }
     }
   }
@@ -51,7 +45,8 @@
     }
 
     @include vp-767 {
-      gap: 23px;
+      gap: 16px;
+      padding: 144px 14px 17px 25px;
     }
   }
 
@@ -99,6 +94,14 @@
       font-weight: 400;
       line-height: 157%;
     }
+
+    br {
+      display: block;
+
+      @include vp-767 {
+        display: none;
+      }
+    }
   }
 
   &__cont {
@@ -116,7 +119,7 @@
     }
 
     @include vp-767 {
-
+      padding: 0;
     }
   }
 
@@ -125,12 +128,10 @@
     width: 100%;
     max-height: 440px;
 
-    @include vp-1023 {
-
-    }
-
     @include vp-767 {
-
+      max-height: unset;
+      width: 320px;
+      overflow: visible;
     }
   }
 
@@ -141,6 +142,10 @@
     height: 81px;
     pointer-events: none;
     z-index: 2;
+
+    @include vp-767 {
+      display: none;
+    }
 
     img {
       width: 100%;
@@ -162,6 +167,14 @@
 
   &__wrapper {
     align-items: center;
+    height: 100%;
+    gap: unset;
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 10px;
+      height: auto;
+    }
   }
 
   &__slide {
@@ -183,7 +196,14 @@
     }
 
     @include vp-767 {
+      grid-template-columns: 1fr;
+      gap: 0;
+      width: calc(100% - 50px);
+      border-radius: 10px;
+    }
 
+    &__slide--none {
+      display: none;
     }
   }
 
@@ -192,6 +212,16 @@
 
     @include vp-1023 {
       width: 95%;
+    }
+
+    @include vp-767 {
+      width: calc(100% - 50px);
+    }
+  }
+
+  & &__slide--thailand {
+    @include vp-767 {
+      order: -1;
     }
   }
 
@@ -206,7 +236,16 @@
     }
 
     @include vp-767 {
-
+      @include grid(1fr, auto) {
+        grid-auto-flow: dense;
+        position: relative;
+        border-radius: 10px 10px 0 0;
+        margin: -6px 0 0;
+        padding: 28px 18px 23px 24px;
+        background-color: $color-default-white;
+        z-index: 1;
+        overflow: hidden;
+      }
     }
   }
 
@@ -217,10 +256,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-
-    @include vp-1023 {
-
-    }
 
     @include vp-767 {
       font-size: 21px;
@@ -242,6 +277,8 @@
     }
 
     @include vp-767 {
+      grid-column: 1/3;
+      margin: 0;
       font-size: 16px;
       line-height: 112.5%;
     }
@@ -252,24 +289,12 @@
       gap: 7px;
       padding: 0;
     }
-
-    @include vp-1023 {
-
-    }
-
-    @include vp-767 {
-
-    }
   }
 
   &__user {
     width: 27px;
     height: 24px;
     flex-shrink: 0;
-
-    @include vp-1023 {
-
-    }
 
     @include vp-767 {
       width: 16px;
@@ -285,10 +310,6 @@
     line-height: 100%;
     opacity: 0.3;
 
-    @include vp-1023 {
-
-    }
-
     @include vp-767 {
       font-size: 16px;
       line-height: 125%;
@@ -296,30 +317,35 @@
   }
 
   &__pic {
-
-
-    @include vp-1023 {
-
-    }
-
     @include vp-767 {
-
+      order: -1;
     }
   }
 
   &__flag img {
     width: 100%;
+
+    @include vp-767 {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__pic img {
     width: auto;
     height: 100%;
+
+    @include vp-767 {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__flag {
     position: absolute;
     top: 23px;
     right: 165px;
+    overflow: hidden;
 
     @include vp-1023 {
       top: 17px;
@@ -327,7 +353,13 @@
     }
 
     @include vp-767 {
-
+      top: 91px;
+      left: 25px;
+      width: 35px;
+      height: 25px;
+      right: unset;
+      z-index: 3;
+      border-radius: 3px;
     }
   }
 
@@ -355,7 +387,13 @@
     }
 
     @include vp-767 {
-
+      width: 270px;
+      padding: 24px 22px 23px 23px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
     }
   }
 }

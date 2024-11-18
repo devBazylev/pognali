@@ -9,7 +9,7 @@ mixin way()
     .container
       .way__wrap
         h2.way__title!= "Направления"
-        p.way__text!= "Мы&#160;не&#160;продаем туры и&#160;ничего не&#160;рекламируем.<br> Люди сами пишут о&#160;странах, куда хотели&#160;бы отправиться и&#160;чем можно там заняться."
+        p.way__text!= "Мы&#160;не&#160;продаем туры и&#160;ничего не&#160;рекламируем.<br> Люди&#160;сами&#160;пишут о&#160;странах, куда хотели&#160;бы отправиться и&#160;чем можно там заняться."
       .way__cont
         .way__slider.swiper
           .way__top
@@ -18,7 +18,7 @@ mixin way()
             img(src=`img/sprite/way-fade.svg`, alt="")
           .way__wrapper.swiper-wrapper
             each item in mock
-              .way__slide.swiper-slide
+              .way__slide.swiper-slide(class=`way__slide--${item.flag}`)
                 .way__data
                   h3.way__name!= item.country
                   p.way__gist!= item.text
