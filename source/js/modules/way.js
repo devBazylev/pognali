@@ -26,10 +26,10 @@ const initWay = () => {
           updateOnWindowResize: true,
           spaceBetween: 0,
 
-          // autoplay: {
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // },
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
 
           breakpoints: {
             768: {

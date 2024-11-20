@@ -2,14 +2,14 @@ mixin team()
   -
     const mock = [
       {name: "Таня Фирсова", online: "false", level: "99", img: "team1-l", hash: "#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи", air: "true", car: "false", bic: "false", run: "false", flag1: "srilanka", flag2: "thailand", flag3: "seychelles"},
-      {name: "Петя Демин", online: "true", level: "80", img: "team2-l", hash: "#бургер #бар #футбол #концерт #крафт", air: "true", car: "false", bic: "true", run: "true", flag1: "belgium", flag2: "czech"}
+      {name: "Петя Демин", online: "true", level: "80", img: "team2-l", hash: "#бургер #бар #футбол #концерт #крафт", air: "true", car: "true", bic: "false", run: "true", flag1: "belgium", flag2: "czech"}
     ]
   section.team
     .container
       .team__cont.team__cont--1
-        h2.team__title!= "Попутчики"
-        p.team__text!= "Все мы&#160;индивидуальны и&#160;у&#160;каждого свой взгляд на&#160;идеальный отдых. Одному нужен пляж и&#160;коктейль, а&#160;другому маршрут для хайкинга."
-        p.team__gist!= "Теперь можно легко найти единомышленников!"
+        h2!= "Попутчики"
+        p!= "Все мы&#160;индивидуальны и&#160;у&#160;каждого свой взгляд на&#160;идеальный отдых. Одному&#160;нужен&#160;пляж и&#160;коктейль, а&#160;другому маршрут для хайкинга."
+        div!= "Теперь можно легко найти единомышленников!"
       .team__cont.team__cont--2
         each item in mock
           .team__card
@@ -78,8 +78,10 @@ mixin team()
                 if item.flag3
                   img(src=`img/sprite/${item.flag3}.svg`, width="35", height="24", alt="Флаг страны.")
             .team__bar
+              .team__circle
+                img(src=`img/sprite/${item.level}.svg`, width="60", height="60", alt="")
               .team__count= item.level
               .team__level= "level"
-      +btn({href: 'catalog.html'}).team__btn.btn= "Показать все"
+      +btn({href: 'catalog.html'}).team__btn.btn= "Показать всеx"
         svg.btn__svg(xmlns="http://www.w3.org/2000/svg" width="12" height="14" viewBox="0 0 12 14" fill="none")
           path(d="M11.5928 7L0.818832 13.0622V0.937822L11.5928 7Z" fill="#1d2e5b")
