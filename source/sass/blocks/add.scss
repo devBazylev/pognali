@@ -42,7 +42,7 @@
     }
   }
 
-  &__selector {
+  & h2 {
     @include flex {
 
     }
@@ -56,7 +56,7 @@
     }
   }
 
-  &__selector {
+  &__list {
 
 
     @include vp-1023 {
@@ -68,7 +68,7 @@
     }
   }
 
-  &__selector {
+  &__item {
 
 
     @include vp-1023 {
@@ -80,7 +80,7 @@
     }
   }
 
-  &__selector {
+  &__card {
 
 
     @include vp-1023 {
@@ -92,7 +92,7 @@
     }
   }
 
-  &__selector {
+  &__wrap {
 
 
     @include vp-1023 {
@@ -104,7 +104,7 @@
     }
   }
 
-  &__selector {
+  &__wrap h3 {
 
 
     @include vp-1023 {
@@ -116,7 +116,7 @@
     }
   }
 
-  &__selector {
+  &__wrap div {
 
 
     @include vp-1023 {
@@ -128,7 +128,7 @@
     }
   }
 
-  &__selector {
+  &__wrap img {
 
 
     @include vp-1023 {
@@ -140,7 +140,7 @@
     }
   }
 
-  &__selector {
+  &__btn {
 
 
     @include vp-1023 {
@@ -152,7 +152,7 @@
     }
   }
 
-  &__selector {
+  &__btn span {
 
 
     @include vp-1023 {
