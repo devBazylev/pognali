@@ -2,8 +2,8 @@ const initIntro = () => {
   const intro = document.querySelector('.intro');
   const items = Array.from(intro.querySelectorAll('.intro__item'));
 
-  let baseTime = 400;
-  let newTime = baseTime;
+  const BASE_TIME = 400;
+  let newTime = BASE_TIME;
   let i = 2;
 
   items.forEach((item) => {
@@ -12,9 +12,9 @@ const initIntro = () => {
       setTimeout(() => {
         item.classList.remove('intro__item--scale');
         item.classList.add('is-active');
-      }, baseTime);
+      }, BASE_TIME);
     }, newTime);
-    newTime = baseTime * i;
+    newTime = BASE_TIME * i;
     i++;
   });
 };

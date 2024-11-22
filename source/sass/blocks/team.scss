@@ -169,8 +169,9 @@
       height: fit-content;
       background-color: $color-default-white;
       border-radius: 20px;
-      overflow: hidden;
       transition: box-shadow $trans-300;
+      cursor: pointer;
+      overflow: hidden;
     }
 
     @include vp-767 {
