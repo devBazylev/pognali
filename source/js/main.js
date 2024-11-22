@@ -1,4 +1,5 @@
 // import {initAnimations} from './modules/animation';
+import {initIntro} from './modules/intro';
 import {initWay} from './modules/way';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     try {
       const intro = document.querySelector('.intro');
       if (intro) {
+        initIntro();
         initWay();
       }
     } catch (e) {
@@ -19,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   if (currentPage === indexHtml) {
+    initIntro();
     initWay();
   }
 

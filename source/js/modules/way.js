@@ -9,7 +9,7 @@ const initWay = () => {
   const clones = [];
   let swiper = null;
 
-  // cloneSlides(wrapper, slides, clones);
+  cloneSlides(wrapper, slides, clones);
 
   const initSlider = () => {
     if (!mob.matches) {
