@@ -1,6 +1,7 @@
 // import {initAnimations} from './modules/animation';
 import {initIntro} from './modules/intro';
 import {initWay} from './modules/way';
+import {initAdd} from './modules/add';
 
 window.addEventListener('DOMContentLoaded', () => {
   const startHtml = '';
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (intro) {
         initIntro();
         initWay();
+        initAdd();
       }
     } catch (e) {
       return;
@@ -23,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (currentPage === indexHtml) {
     initIntro();
     initWay();
+    initAdd();
   }
 
   // if (currentPage === catalogHtml) {
