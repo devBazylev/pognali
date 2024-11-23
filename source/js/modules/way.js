@@ -11,7 +11,7 @@ const initWay = () => {
 
   cloneSlides(wrapper, slides, clones);
 
-  const xxx = () => {
+  const mobCheck = () => {
     if (mob.matches) {
       addClassArray(clones, 'way__slide--none');
     } else {
@@ -66,8 +66,8 @@ const initWay = () => {
 
   mob.addListener(breakpointChecker);
   breakpointChecker();
-  window.addEventListener('resize', xxx);
-  xxx();
+  window.addEventListener('resize', mobCheck);
+  mobCheck();
 };
 
 export {initWay};
