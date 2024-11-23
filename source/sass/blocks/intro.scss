@@ -176,6 +176,7 @@
       transform: scale(0, 0) rotateX(360deg);
       transform-style: preserve-3d;
       perspective: 1000px;
+      opacity: 0;
     }
 
     @include vp-1439 {
@@ -455,11 +456,13 @@
 
   &__item--scale {
     transform: scale(1.5, 1.5) rotateX(0deg);
-    transition: transform $trans-400;
+    opacity: 1;
+    transition: transform $trans-400, opacity $trans-700;
   }
 
   &__item.is-active {
     transform: scale(1, 1);
+    opacity: 1;
     transition: transform $trans-200;
   }
 }
