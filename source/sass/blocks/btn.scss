@@ -35,6 +35,14 @@
     }
   }
 
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    .btn__svg {
+      opacity: 0.3;
+    }
+  }
+
   &__svg {
     transition: transform $trans-300;
   }
