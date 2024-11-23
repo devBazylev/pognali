@@ -201,8 +201,10 @@
       width: calc(100% - 50px);
       border-radius: 10px;
     }
+  }
 
-    &__slide--none {
+  &__slide--none {
+    @include vp-767 {
       display: none;
     }
   }

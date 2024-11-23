@@ -9,7 +9,15 @@ const initWay = () => {
   const clones = [];
   let swiper = null;
 
-  // cloneSlides(wrapper, slides, clones);
+  cloneSlides(wrapper, slides, clones);
+
+  const xxx = () => {
+    if (mob.matches) {
+      addClassArray(clones, 'way__slide--none');
+    } else {
+      removeClassArray(clones, 'way__slide--none');
+    }
+  };
 
   const initSlider = () => {
     if (!mob.matches) {
@@ -58,6 +66,8 @@ const initWay = () => {
 
   mob.addListener(breakpointChecker);
   breakpointChecker();
+  window.addEventListener('resize', xxx);
+  xxx();
 };
 
 export {initWay};
