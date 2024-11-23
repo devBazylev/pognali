@@ -173,8 +173,7 @@
       font-weight: 700;
       line-height: 110%;
       counter-increment: list_counter;
-      transform: scale(0, 0);
-      transform: rotateX(360deg);
+      transform: scale(0, 0) rotateX(360deg);
       transform-style: preserve-3d;
       perspective: 1000px;
     }
@@ -455,7 +454,7 @@
   }
 
   &__item--scale {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.5, 1.5) rotateX(0deg);
     transition: transform $trans-400;
   }
 

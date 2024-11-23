@@ -9,7 +9,7 @@
   @include vp-1023 {
     padding: 100px 0 53px;
     border-radius: 0 0 55px 55px;
-    background-color: #EDEFF6;
+    background-color: $color-solitude;
   }
 
   @include vp-767 {
@@ -41,7 +41,7 @@
   & h2 {
     grid-column: 1/3;
     margin: 0 40px 65px 0;
-    color: #192144;
+    color: $color-midnight-express-3;
     font-size: 95px;
     text-align: center;
     font-style: normal;
@@ -57,7 +57,7 @@
     @include vp-767 {
       grid-column: unset;
       margin: 0 0 14px;
-      color: #272B3B;
+      color: $color-midnight-express-2;
       font-size: 37px;
       line-height: 78%;
     }
@@ -88,7 +88,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    border-bottom: 1px solid #E1E3E9;
+    border-bottom: 1px solid $color-solitude2;
 
     @include vp-1023 {
       padding: 22px 0 20px;
@@ -112,8 +112,7 @@
         width: 72px;
         height: 70px;
         border-radius: 50%;
-        background-color: aqua;
-        color: #FFF;
+        color: $color-default-white;
         font-size: 28px;
         font-style: normal;
         font-weight: 400;
@@ -140,25 +139,25 @@
   }
 
   &__item:first-child {
-    border-top: 1px solid #E1E3E9;
-    border-bottom: 1px solid #E1E3E9;
+    border-top: 1px solid $color-solitude2;
+    border-bottom: 1px solid $color-solitude2;
   }
 
   &__item:nth-child(3n + 1) {
     &:before {
-      background-color: #4D99D6;
+      background-color: $color-picton-blue;
     }
   }
 
   &__item:nth-child(3n + 2) {
     &:before {
-      background-color: #7EBAEB;
+      background-color: $color-jordy-blue;
     }
   }
 
   &__item:nth-child(3n + 3) {
     &:before {
-      background-color: #A8D2F4;
+      background-color: $color-pale-cornflower-blue;
     }
   }
 
@@ -168,7 +167,7 @@
       gap: 20px;
       height: fit-content;
       padding: 62px 10px 69px;
-      background-color: #3F4251;
+      background-color: $color-blue-zodiac;
       border-radius: 20px;
       filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.10));
     }
@@ -211,7 +210,7 @@
   &__wrap h3 {
     width: fit-content;
     margin: 0 auto 7px;
-    color: #FFF;
+    color: $color-default-white;
     text-align: center;
     font-size: 41px;
     font-style: normal;
@@ -233,7 +232,7 @@
 
   &__wrap div {
     margin: 0 auto 0 52px;
-    color: #FFF;
+    color: $color-default-white;
     text-align: center;
     font-size: 28px;
     font-style: normal;
@@ -306,7 +305,7 @@
   }
 
   &__btn span {
-    color: #3F4251;
+    color: $color-blue-zodiac;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -314,13 +313,13 @@
     transition: opacity $trans-300;
 
     @include vp-1023 {
-      color: #192144;
+      color: $color-midnight-express-3;
       font-size: 20px;
     }
 
     @include vp-767 {
       grid-row: unset;
-      color: #272B3B;
+      color: $color-midnight-express-2;
       font-size: 16px;
     }
   }
@@ -349,7 +348,7 @@
       width: 52.1%;
       max-height: 0;
       border-radius: 30px;
-      background: #FFF;
+      background: $color-default-white;
       box-shadow: 0px 4px 22px 0px rgba(29, 46, 91, 0.18);
       transition: max-height $trans-300;
       overflow: hidden;
@@ -374,7 +373,7 @@
   &__modal h3 {
     margin: 54px auto 16px;
     width: fit-content;
-    color: #192144;
+    color: $color-midnight-express-3;
     font-size: 45px;
     font-style: normal;
     font-weight: 700;
@@ -415,7 +414,7 @@
   }
 
   &__box div {
-    color: #444;
+    color: $color-charcoal;
     text-align: left;
     font-size: 22px;
     font-style: normal;
@@ -432,7 +431,7 @@
   }
 
   &__box span {
-    color: #444;
+    color: $color-charcoal;
     text-align: right;
     font-size: 22px;
     font-style: normal;
@@ -453,7 +452,7 @@
       width: 100%;
       min-height: 107px;
       margin: auto 0 0;
-      background-color: #F3F4F8;
+      background-color: $color-ghost-white;
       color: #1D2E5B;
       font-size: 24px;
       font-style: normal;
@@ -473,7 +472,7 @@
   }
 
   &__close:hover {
-    background-color: #EDEFF6;
+    background-color: $color-solitude;
   }
 
   &__close:active {

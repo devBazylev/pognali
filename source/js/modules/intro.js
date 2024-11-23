@@ -12,7 +12,7 @@ const initIntro = () => {
       setTimeout(() => {
         item.classList.remove('intro__item--scale');
         item.classList.add('is-active');
-      }, BASE_TIME);
+      }, BASE_TIME + 100);
     }, newTime);
     newTime = BASE_TIME * i;
     i++;
