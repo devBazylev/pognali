@@ -142,7 +142,6 @@
       padding: 0;
       border-radius: 20px;
       counter-reset: list_counter;
-      // overflow: hidden;
     }
 
     @include vp-1023 {
@@ -175,6 +174,9 @@
       line-height: 110%;
       counter-increment: list_counter;
       transform: scale(0, 0);
+      transform: rotateX(360deg);
+      transform-style: preserve-3d;
+      perspective: 1000px;
     }
 
     @include vp-1439 {
