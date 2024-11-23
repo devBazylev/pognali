@@ -93,7 +93,7 @@
     }
   }
 
-  &__cont--1 p  {
+  &__cont--1 p {
     margin: 0 0 33px;
     color: $color-midnight-express-3;
     font-size: 24px;
@@ -180,11 +180,11 @@
     }
 
     @include hover-focus {
-      box-shadow: 0px 0px 10px 0px #FFF;
+      box-shadow: 0 0 10px 0 $color-default-white;
     }
 
     &:active {
-      box-shadow: 0px 0px 10px 0px #FFF;
+      box-shadow: 0 0 10px 0 $color-default-white;
     }
   }
 
@@ -249,7 +249,7 @@
       font-size: 21px;
     }
 
-    &:before {
+    &::before {
       @include pse {
         position: absolute;
         top: 7px;
@@ -270,7 +270,7 @@
   }
 
   &__name.is-active {
-    &:before {
+    &::before {
       background-color: $color-lawn-green;
     }
   }
@@ -330,8 +330,8 @@
       height: 60px;
       flex-shrink: 0;
       border-radius: 50%;
-      border: 4px solid rgba(255, 141, 48, 0.00);
-      background: rgba(0, 0, 0, 0.60);
+      border: 4px solid rgba(255, 141, 48, 0);
+      background: rgba(0, 0, 0, 0.6);
       z-index: 1;
     }
 
@@ -369,7 +369,7 @@
     font-weight: 700;
     line-height: 100%;
 
-    &:after {
+    &::after {
       @include pse {
         position: absolute;
         bottom: -1px;
@@ -425,4 +425,3 @@
 main > .team:not(:last-child) {
   margin: -63px 0;
 }
-

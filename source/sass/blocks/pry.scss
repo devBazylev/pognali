@@ -1,165 +1,165 @@
-.pry {
-  position: relative;
-  gap: 50px;
-  width: 100vw;
-  margin: 0 0 -100px;
-  padding: 150px 0 50px;
-  overflow: hidden;
-  z-index: 6;
+// .pry {
+//   position: relative;
+//   gap: 50px;
+//   width: 100vw;
+//   margin: 0 0 -100px;
+//   padding: 150px 0 50px;
+//   overflow: hidden;
+//   z-index: 6;
 
-  @include vp-1439 {
+//   @include vp-1439 {
 
-  }
+//   }
 
-  @include vp-1279 {
+//   @include vp-1279 {
 
-  }
+//   }
 
-  @include vp-1023 {
+//   @include vp-1023 {
 
-  }
+//   }
 
-  @include vp-767 {
+//   @include vp-767 {
 
-  }
+//   }
 
-  @include vp-374 {
+//   @include vp-374 {
 
-  }
+//   }
 
-  .container {
-    @include flex {
-      position: relative;
-      width: 100%;
-      gap: 0;
+//   .container {
+//     @include flex {
+//       position: relative;
+//       width: 100%;
+//       gap: 0;
 
-      @include vp-1023 {
+//       @include vp-1023 {
 
-      }
+//       }
 
-      @include vp-767 {
+//       @include vp-767 {
 
-      }
-    }
-  }
+//       }
+//     }
+//   }
 
-  .container h2 {
+//   .container h2 {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  .container p {
+//   .container p {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__link {
+//   &__link {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__form {
+//   &__form {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__input {
+//   &__input {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__reg {
+//   &__reg {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__label {
+//   &__label {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__contacts {
+//   &__contacts {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__mail {
+//   &__mail {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
+//     }
+//   }
 
-  &__tel {
+//   &__tel {
 
 
-    @include vp-1023 {
+//     @include vp-1023 {
 
-    }
+//     }
 
-    @include vp-767 {
+//     @include vp-767 {
 
-    }
-  }
-}
+//     }
+//   }
+// }

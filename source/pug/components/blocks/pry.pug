@@ -7,7 +7,7 @@ mixin pry()
       form.pry__form
         input.pry__input(id="email")
         +btn({href: '#'}).pry__reg
-        label(for="email").pry__label!= "E-mail"
+        label.pry__label(for="email")!= "E-mail"
       p!= "Остались вопросы? Мы&#160;с&#160;радостью на&#160;них ответим!"
       .pry__contacts
         a.pry__mail!= "8 800 555-86-28"

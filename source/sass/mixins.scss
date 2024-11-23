@@ -135,6 +135,6 @@
   @content;
 
   @if $name {
-      background-image: url("https://hhcdn.ru/ichameleon/#{$name}.svg");
+    background-image: url("https://hhcdn.ru/ichameleon/#{$name}.svg");
   }
 }
