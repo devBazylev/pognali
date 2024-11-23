@@ -2,6 +2,7 @@
   position: relative;
   margin: -63px 0 0;
   overflow: hidden;
+  z-index: 8;
 
   @include vp-1023 {
     margin: -52px 0 0;
