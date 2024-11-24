@@ -1,4 +1,5 @@
 import {initIntro} from './modules/intro';
+import {initServ} from './modules/serv';
 import {initWay} from './modules/way';
 import {initAdd} from './modules/add';
 import {initPry} from './modules/pry';
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const intro = document.querySelector('.intro');
       if (intro) {
         initIntro();
+        initServ();
         initWay();
         initAdd();
         initPry();
@@ -25,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (currentPage === indexHtml) {
     initIntro();
+    initServ();
     initWay();
     initAdd();
     initPry();
