@@ -170,9 +170,8 @@
       height: fit-content;
       background-color: $color-default-white;
       border-radius: 20px;
-      transition: box-shadow $trans-300;
+      transition: box-shadow $trans-300, transform $trans-300;
       cursor: pointer;
-      overflow: hidden;
     }
 
     @include vp-767 {
@@ -181,6 +180,7 @@
 
     @include hover-focus {
       box-shadow: 0 0 10px 0 $color-default-white;
+      transform: scale(1.01, 1.01);
     }
 
     &:active {
@@ -212,6 +212,11 @@
     }
   }
 
+  &__pic {
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+  }
+
   &__pic img {
     width: 100%;
   }
@@ -220,8 +225,8 @@
     @include flex {
       position: relative;
       align-items: center;
-      gap: 21px;
-      padding: 30px 15px 22px;
+      gap: 15px;
+      padding: 30px 15px 19px;
     }
 
     @include vp-1023 {
@@ -237,13 +242,14 @@
   &__name {
     position: relative;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 6px;
     color: $color-catalina-blue;
     text-align: center;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
+    transition: opacity $trans-300;
 
     @include vp-767 {
       font-size: 21px;
@@ -275,6 +281,14 @@
     }
   }
 
+  &__name:hover {
+    opacity: 0.7;
+  }
+
+  &__name:active {
+    opacity: 0.3;
+  }
+
   &__hash {
     @include flex(row) {
       justify-content: center;
@@ -294,8 +308,98 @@
   &__trans {
     @include flex(row) {
       justify-content: center;
-      gap: 10px;
     }
+  }
+
+  &__go {
+    @include btn {
+      position: relative;
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 50%;
+      background-color: $color-default-white;
+      transition: background-color $trans-300, box-shadow $trans-300;
+    }
+  }
+
+  svg path {
+    transition: opacity $trans-300, fill $trans-300;
+  }
+
+  svg.is-active path {
+    opacity: 1;
+  }
+
+  &__go:hover {
+    box-shadow: 0 2px 6px 0 rgba(22, 28, 53, 0.17);
+
+    svg.is-active path {
+      opacity: 0.7;
+    }
+
+    svg path {
+      fill: $color-pink-swan;
+      opacity: 1;
+    }
+  }
+
+  &__go:active {
+    background-color: $color-solitude3;
+
+    svg.is-active path {
+      opacity: 0.3;
+    }
+
+    svg path {
+      fill: $color-catalina-blue;
+      opacity: 0.1;
+    }
+  }
+
+  &__sign {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: fit-content;
+    height: fit-content;
+    padding: 14px 18px;
+    background-color: $color-midnight-express-5;
+    color: $color-default-white;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $trans-300;
+    z-index: 1;
+
+    &::after {
+      @include pse {
+        position: absolute;
+        top: -6px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-right-width: 5px;
+        border-left-width: 5px;
+        border-bottom: 7px solid $color-midnight-express-5;
+      }
+    }
+  }
+
+  &__flag:hover &__sign,
+  &__flag:active &__sign,
+  &__go:hover &__sign,
+  &__go:active &__sign {
+    opacity: 1;
   }
 
   &__flags {
@@ -312,7 +416,16 @@
     }
   }
 
-  &__flags img {
+  &__flag {
+    position: relative;
+    width: 35px;
+    height: 24px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  &__flag img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -387,10 +500,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-  }
-
-  .is-active path {
-    opacity: 1;
   }
 
   &__btn {
