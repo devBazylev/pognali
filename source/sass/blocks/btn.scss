@@ -16,7 +16,7 @@
   line-height: 100%;
   border: none;
   cursor: pointer;
-  transition: background-color $trans-300;
+  transition: background-color $trans-300, color $trans-300;
 
   @include vp-767 {
     padding: 28px 33px 24px 31px;
@@ -27,7 +27,7 @@
     pointer-events: none;
   }
 
-  @include hover-focus {
+  &:hover {
     background-color: $color-jordy-blue;
 
     .btn__svg {

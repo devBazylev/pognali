@@ -1,166 +1,183 @@
-// .map {
-//   position: relative;
-//   gap: 50px;
-//   width: 100vw;
-//   margin: 0 0 -100px;
-//   padding: 150px 0 50px;
-//   overflow: hidden;
-
-//   @include vp-1439 {
-
-//   }
-
-//   @include vp-1279 {
-
-//   }
-
-//   @include vp-1023 {
-
-//   }
-
-//   @include vp-767 {
-
-//   }
-
-//   @include vp-374 {
-
-//   }
-
-//   .container {
-//     @include flex {
-//       position: relative;
-//       width: 100%;
-//       gap: 0;
-
-//       @include vp-1023 {
-
-//       }
-
-//       @include vp-767 {
-
-//       }
-//     }
-//   }
-
-//   &__selector {
-//     @include flex {
-
-//     }
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__selector {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-// }
+.map {
+  position: relative;
+  gap: 50px;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .container {
+    @include flex {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      gap: 0;
+      padding: 0;
+    }
+  }
+
+  &__head {
+    @include flex(row) {
+      position: relative;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 155px calc((100vw - 1200px) / 2) 56px;
+      background-color: #7EBAEB;
+      border-radius: 0 0 60px 60px;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+      z-index: 1;
+    }
+
+    @include vp-1279 {
+      padding: 150px 75px 56px;
+    }
+
+    @include vp-1023 {
+      gap: 42px;
+      padding: 150px 75px 84px;
+      border-radius: 0 0 56px 56px;
+    }
+
+    @include vp-767 {
+      gap: 32px;
+      padding: 134px 25px 33px;
+      background-color: #A8D2F4;
+      border-radius: 0 0 30px 30px;
+    }
+  }
+
+  &__adress {
+    @include flex(row) {
+
+      align-items: center;
+      gap: 31px;
+      margin: 0 78px 0 0;
+      padding: 0 0 0 163px;
+    }
+
+    @include vp-1279 {
+      margin: 0;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+      gap: 26px;
+    }
+
+    @include vp-767 {
+      gap: 17px;
+    }
+  }
+
+  &__pic {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    background-color: #121936;
+    border-radius: 50%;
+
+    @include vp-1023 {
+      width: 68px;
+      height: 68px;
+    }
+
+    @include vp-767 {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__pic svg {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+
+    @include vp-1023 {
+      width: 32px;
+      height: 32px;
+    }
+
+    @include vp-767 {
+      width: 21px;
+      height: 21px;
+    }
+  }
+
+  &__sign {
+    color: #1D2E5B;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 137%;
+    }
+  }
+
+  &__btn {
+    border: 3px solid #192144;
+    margin: 5px 15px 0 0;
+    padding: 26px 14px 24px 33px;
+    background-color: transparent;
+
+    @include vp-1023 {
+      width: 100%;
+      margin: 0;
+    }
+
+    @include vp-767 {
+      padding: 20px 12px 18px 13px;
+      border-radius: 10px;
+      font-size: 18px;
+      line-height: 100%;
+    }
+
+    &:hover {
+      color: #Fff;
+      background-color: #192144;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: #192144;
+    }
+  }
+
+  &__btn path {
+    transition: fill $trans-300;
+  }
+
+  &__btn:hover path {
+    fill: #Fff;
+  }
+
+  &__btn:active path {
+    fill: rgba(255, 255, 255, 0.3);
+  }
+
+  &__iframe {
+    margin: -130px 0 0;
+  }
+
+  &__iframe,
+  &__iframe iframe {
+    width: 100%;
+    height: 680px;
+
+    @include vp-1023 {
+      height: 740px;
+    }
+
+    @include vp-767 {
+      height: 720px;
+    }
+  }
+}
