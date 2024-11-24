@@ -7,7 +7,7 @@ mixin pry()
       form.pry__form(action="https://echo.htmlacademy.ru", autocomplete="on", method="post")
         label.pry__label(for="email")!= "email"
         input.pry__input(id="email", type="email", name="email", maxlength="50", placeholder="E-mail", required)
-        +btn.pry__reg(type="sybmit")
+        +btn.pry__reg(type="sybmit", aria-label="Регистрация.")
           span!= "Регистрация"
           svg.btn__svg(xmlns="http://www.w3.org/2000/svg", width="12", height="14", viewBox="0 0 12 14", fill="none")
             path(d="M11.5928 7L0.818832 13.0622V0.937822L11.5928 7Z", fill="#1d2e5b")
