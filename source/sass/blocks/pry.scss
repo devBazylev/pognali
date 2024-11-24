@@ -1,165 +1,400 @@
-// .pry {
-//   position: relative;
-//   gap: 50px;
-//   width: 100vw;
-//   margin: 0 0 -100px;
-//   padding: 150px 0 50px;
-//   overflow: hidden;
-//   z-index: 6;
-
-//   @include vp-1439 {
-
-//   }
-
-//   @include vp-1279 {
-
-//   }
-
-//   @include vp-1023 {
-
-//   }
-
-//   @include vp-767 {
-
-//   }
-
-//   @include vp-374 {
-
-//   }
-
-//   .container {
-//     @include flex {
-//       position: relative;
-//       width: 100%;
-//       gap: 0;
-
-//       @include vp-1023 {
-
-//       }
-
-//       @include vp-767 {
-
-//       }
-//     }
-//   }
-
-//   .container h2 {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   .container p {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__link {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__form {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__input {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__reg {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__label {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__contacts {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__mail {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__tel {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-// }
+.pry {
+  position: relative;
+  gap: 50px;
+  width: 100vw;
+  padding: 150px 0 0;
+  border-radius: 0 0 60px 60px;
+  background-color: #3F4251;
+  overflow: hidden;
+  z-index: 6;
+
+  @include vp-1023 {
+    border-radius: 0 0 60px 60px;
+    background-color: #192144;
+  }
+
+  @include vp-767 {
+    padding: 100px 0 0;
+    border-radius: 0 0 30px 30px;
+    background-color: #272B3B;
+  }
+
+  .container {
+    @include flex {
+      position: relative;
+      gap: 20px;
+      width: 100%;
+      padding: 100px 133px 102px;
+
+      @include vp-1279 {
+        padding: 87px 50px 60px;
+      }
+
+      @include vp-1023 {
+        padding: 22px 25px 56px;
+      }
+
+      @include vp-767 {
+        gap: 10px;
+        padding: 23px 29px 49px 21px;
+      }
+    }
+  }
+
+  .container h2 {
+    width: fit-content;
+    margin: 0 auto;
+    color: #FFF;
+    font-size: 95px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+
+    @include vp-1023 {
+      margin: 0 auto 7px;
+      font-size: 75px;
+      font-variant: all-small-caps;
+    }
+
+    @include vp-767 {
+      margin: 0 auto 9px;
+      font-size: 24px;
+      font-variant: normal;
+    }
+  }
+
+  .container p {
+    width: fit-content;
+    width: 60%;
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%;
+
+
+    @include vp-1023 {
+      width: 100%;
+      font-size: 24px;
+      line-height: 133%;
+    }
+
+    @include vp-767 {
+      width: 83%;
+      font-size: 13px;
+      line-height: 169%;
+    }
+  }
+
+  .container p:nth-of-type(2n + 1) {
+    margin: 0 auto 29px;
+
+    @include vp-1023 {
+      margin: 0 auto 51px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto 19px;
+    }
+  }
+
+  .container p:nth-of-type(2n + 2) {
+    margin: 0 auto 23px;
+    letter-spacing: 0.3px;
+
+    @include vp-1023 {
+      margin: 0 auto 6px;
+    }
+
+    @include vp-767 {
+      margin: 0 auto 7px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 0 0 7px;
+    color: #A8D2F4;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%;
+    transition: color $trans-300;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+
+    @include vp-1023 {
+      display: inline-flex;
+      color: #A8D2F4;
+      font-size: 24px;
+      line-height: 133%;
+    }
+
+    @include vp-767 {
+      font-size: 13px;
+      line-height: 169%;
+    }
+
+    &:hover {
+      color: #4D99D6;
+    }
+
+    &:active {
+      color: #B8CDE0;
+    }
+  }
+
+  &__form {
+    @include grid(1fr, 28.1%) {
+      position: relative;
+      gap: 20px 0;
+      width: 100%;
+      margin: 0 auto 50px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr 13%;
+      width: 85.9%;
+      margin: 0 auto 56px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 78% 22%;
+      width: 100%;
+      margin: 0 0 20px;
+      background-color: #FFF;
+      border-radius: 10px 10px 10px 10px;
+      overflow: hidden;
+    }
+  }
+
+  &__input {
+    padding: 22px 32px;
+    background-color: #192144;
+    border-radius: 20px 0 0 20px;
+    border: 4px solid #FFF;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 100%;
+    outline: none;
+    transition: background-color $trans-300, color $trans-300;
+
+    @include vp-1023 {
+      padding: 22px 32px 21px;
+    }
+
+    @include vp-767 {
+      padding: 16px 22px;
+      font-size: 18px;
+      border-radius: 10px 0 0 10px;
+    }
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+      transition: color $trans-300;
+    }
+
+    &:placeholder-shown {
+      color: rgba(68, 68, 68, 0.3);
+      background-color: #FFF;
+    }
+  }
+
+  &__form--validation &__input:invalid {
+    color: #F00;
+    background-color: #FFF;
+  }
+
+  &__form--validation &__input:invalid::placeholder {
+    color: #F00;
+  }
+
+  &__reg {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 20px 20px 0;
+    padding: 23px 34px 23px 41px;
+
+    @include vp-1023 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+      border-radius: 10px 10px 10px 10px;
+    }
+
+    span {
+      @include vp-1023 {
+        display: none;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    grid-area: 1/1/2/2;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 22px 32px;
+    color: green;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    background-color: transparent;
+    opacity: 0;
+    transition: opacity $trans-300;
+    cursor: pointer;
+
+    @include vp-1023 {
+      padding: 22px 32px 21px;
+    }
+
+    @include vp-767 {
+      padding: 16px 22px;
+      font-size: 18px;
+    }
+  }
+
+  &__label:hover + &__input::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+  }
+
+  &__form--validation &__label:hover + &__input:invalid::placeholder {
+    color: #F00;
+  }
+
+
+  &__contacts {
+    @include grid(1fr, 51.3%) {
+      gap: 20px;
+      width: 80%;
+      margin: 0 auto;
+      padding: 0 0 0 34px;
+    }
+
+    @include vp-1439 {
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(465px, 1fr));
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 0 0 0 50px;
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &__tel,
+  &__mail {
+    @include btn {
+      gap: 31px;
+      color: #CCE5FA;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      transition: color $trans-300;
+      text-transform: uppercase;
+    }
+
+    @include vp-1023 {
+      gap: 22px;
+    }
+
+    @include vp-767 {
+      gap: 17px;
+      color: #A8D2F4;
+      font-size: 16px;
+      line-height: 137%;
+    }
+
+    & path {
+      transition: fill $trans-300;
+    }
+
+    &:hover {
+      color: #4D99D6;
+
+      path {
+        fill: #4D99D6;
+      }
+    }
+
+    &:active {
+      color: rgba(168, 210, 244, 0.3);
+
+      path {
+        fill: rgba(168, 210, 244, 0.3);
+      }
+    }
+  }
+
+  &__tel span,
+  &__mail span {
+    order: -1;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    background-color: #121936;
+    border-radius: 50%;
+
+    @include vp-1023 {
+      width: 68px;
+      height: 68px;
+    }
+
+    @include vp-767 {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__tel svg {
+    @include vp-1023 {
+      width: 26px;
+      height: 26px;
+    }
+
+    @include vp-767 {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__mail svg {
+    @include vp-1023 {
+      width: 35px;
+      height: 37px;
+    }
+
+    @include vp-767 {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}

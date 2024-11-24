@@ -2,6 +2,7 @@
 import {initIntro} from './modules/intro';
 import {initWay} from './modules/way';
 import {initAdd} from './modules/add';
+import {initPry} from './modules/pry';
 
 window.addEventListener('DOMContentLoaded', () => {
   const startHtml = '';
@@ -16,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
         initIntro();
         initWay();
         initAdd();
+        initPry();
       }
     } catch (e) {
       return;
@@ -26,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initIntro();
     initWay();
     initAdd();
+    initPry();
   }
 
   // if (currentPage === catalogHtml) {

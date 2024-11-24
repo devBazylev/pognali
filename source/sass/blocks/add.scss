@@ -2,13 +2,14 @@
   position: relative;
   gap: 50px;
   width: 100vw;
-  padding: 159px 0 50px;
+  padding: 159px 0 66px;
   overflow: hidden;
+  background-color: $color-default-white;
   z-index: 7;
 
   @include vp-1023 {
     padding: 100px 0 53px;
-    border-radius: 0 0 55px 55px;
+    border-radius: 0 0 60px 60px;
     background-color: $color-solitude;
   }
 
