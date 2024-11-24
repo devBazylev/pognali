@@ -24,7 +24,7 @@
       width: 100%;
       margin: 0 auto;
       padding: 155px calc((100vw - 1200px) / 2) 56px;
-      background-color: #7EBAEB;
+      background-color: $color-jordy-blue;
       border-radius: 0 0 60px 60px;
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
       z-index: 1;
@@ -43,7 +43,7 @@
     @include vp-767 {
       gap: 32px;
       padding: 134px 25px 33px;
-      background-color: #A8D2F4;
+      background-color: $color-pale-cornflower-blue;
       border-radius: 0 0 30px 30px;
     }
   }
@@ -78,7 +78,7 @@
     flex-shrink: 0;
     width: 90px;
     height: 90px;
-    background-color: #121936;
+    background-color: $color-midnight-express-4;
     border-radius: 50%;
 
     @include vp-1023 {
@@ -109,7 +109,7 @@
   }
 
   &__sign {
-    color: #1D2E5B;
+    color: $color-catalina-blue;
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
@@ -123,7 +123,7 @@
   }
 
   &__btn {
-    border: 3px solid #192144;
+    border: 3px solid $color-midnight-express-3;
     margin: 5px 15px 0 0;
     padding: 26px 14px 24px 33px;
     background-color: transparent;
@@ -141,13 +141,13 @@
     }
 
     &:hover {
-      color: #Fff;
-      background-color: #192144;
+      color: $color-default-white;
+      background-color: $color-midnight-express-3;
     }
 
     &:active {
       color: rgba(255, 255, 255, 0.3);
-      background-color: #192144;
+      background-color: $color-midnight-express-3;
     }
   }
 
@@ -156,7 +156,7 @@
   }
 
   &__btn:hover path {
-    fill: #Fff;
+    fill: $color-default-white;
   }
 
   &__btn:active path {
