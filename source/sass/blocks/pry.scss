@@ -4,19 +4,19 @@
   width: 100vw;
   padding: 150px 0 0;
   border-radius: 0 0 60px 60px;
-  background-color: #3F4251;
+  background-color: $color-blue-zodiac;
   overflow: hidden;
   z-index: 6;
 
   @include vp-1023 {
     border-radius: 0 0 60px 60px;
-    background-color: #192144;
+    background-color: $color-midnight-express-3;
   }
 
   @include vp-767 {
     padding: 100px 0 0;
     border-radius: 0 0 30px 30px;
-    background-color: #272B3B;
+    background-color: $color-midnight-express-2;
   }
 
   .container {
@@ -44,7 +44,7 @@
   .container h2 {
     width: fit-content;
     margin: 0 auto;
-    color: #FFF;
+    color: $color-default-white;
     font-size: 95px;
     font-style: normal;
     font-weight: 700;
@@ -66,7 +66,7 @@
   .container p {
     width: fit-content;
     width: 60%;
-    color: #FFF;
+    color: $color-default-white;
     text-align: center;
     font-size: 28px;
     font-style: normal;
@@ -117,7 +117,7 @@
     width: fit-content;
     margin: 0 auto;
     padding: 0 0 0 7px;
-    color: #A8D2F4;
+    color: $color-pale-cornflower-blue;
     font-size: 28px;
     font-style: normal;
     font-weight: 300;
@@ -132,7 +132,7 @@
 
     @include vp-1023 {
       display: inline-flex;
-      color: #A8D2F4;
+      color: $color-pale-cornflower-blue;
       font-size: 24px;
       line-height: 133%;
     }
@@ -143,11 +143,11 @@
     }
 
     &:hover {
-      color: #4D99D6;
+      color: $color-picton-blue;
     }
 
     &:active {
-      color: #B8CDE0;
+      color: $color-spindle;
     }
   }
 
@@ -169,7 +169,7 @@
       grid-template-columns: 78% 22%;
       width: 100%;
       margin: 0 0 20px;
-      background-color: #FFF;
+      background-color: $color-default-white;
       border-radius: 10px 10px 10px 10px;
       overflow: hidden;
     }
@@ -177,10 +177,10 @@
 
   &__input {
     padding: 22px 32px;
-    background-color: #192144;
+    background-color: $color-midnight-express-3;
     border-radius: 20px 0 0 20px;
-    border: 4px solid #FFF;
-    color: #FFF;
+    border: 4px solid $color-default-white;
+    color: $color-default-white;
     font-size: 24px;
     font-weight: 700;
     font-style: normal;
@@ -205,17 +205,17 @@
 
     &:placeholder-shown {
       color: rgba(68, 68, 68, 0.3);
-      background-color: #FFF;
+      background-color: $color-default-white;
     }
   }
 
   &__form--validation &__input:invalid {
-    color: #F00;
-    background-color: #FFF;
+    color: $color-red;
+    background-color: $color-default-white;
   }
 
   &__form--validation &__input:invalid::placeholder {
-    color: #F00;
+    color: $color-red;
   }
 
   &__reg {
@@ -253,14 +253,12 @@
     width: 100%;
     height: 100%;
     padding: 22px 32px;
-    color: green;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
     background-color: transparent;
     opacity: 0;
-    transition: opacity $trans-300;
     cursor: pointer;
 
     @include vp-1023 {
@@ -278,7 +276,7 @@
   }
 
   &__form--validation &__label:hover + &__input:invalid::placeholder {
-    color: #F00;
+    color: $color-red;
   }
 
 
@@ -310,7 +308,7 @@
   &__mail {
     @include btn {
       gap: 31px;
-      color: #CCE5FA;
+      color: $color-pattens-blue;
       font-size: 28px;
       font-style: normal;
       font-weight: 700;
@@ -325,7 +323,7 @@
 
     @include vp-767 {
       gap: 17px;
-      color: #A8D2F4;
+      color: $color-pale-cornflower-blue;
       font-size: 16px;
       line-height: 137%;
     }
@@ -335,10 +333,10 @@
     }
 
     &:hover {
-      color: #4D99D6;
+      color: $color-picton-blue;
 
       path {
-        fill: #4D99D6;
+        fill: $color-picton-blue;
       }
     }
 
@@ -360,7 +358,7 @@
     justify-content: center;
     width: 90px;
     height: 90px;
-    background-color: #121936;
+    background-color: $color-midnight-express-4;
     border-radius: 50%;
 
     @include vp-1023 {
