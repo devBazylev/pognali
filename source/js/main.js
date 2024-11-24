@@ -1,4 +1,3 @@
-// import {initAnimations} from './modules/animation';
 import {initIntro} from './modules/intro';
 import {initWay} from './modules/way';
 import {initAdd} from './modules/add';
@@ -34,8 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // if (currentPage === catalogHtml) {
 
   // }
-
-  // initAnimations();
 
   window.addEventListener('load', () => {
 

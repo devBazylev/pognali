@@ -1,0 +1,64 @@
+.alpha {
+  position: relative;
+  padding: 223px 126px 67px;
+  background-color: $color-midnight-express-3;
+  border-radius: 0 0 56px 56px;
+  z-index: 3;
+
+  @include vp-1023 {
+    padding: 223px 75px 67px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  @include vp-767 {
+    padding: 97px 25px 10px;
+    border-radius: 0 0 20px 20px;
+  }
+
+  &::after {
+    @include pse {
+      position: absolute;
+      bottom: -5px;
+      left: 126px;
+      width: 288px;
+      height: 8px;
+      border-radius: 4px;
+      background-color: $color-picton-blue;
+    }
+
+    @include vp-1023 {
+      left: 74px;
+    }
+
+    @include vp-767 {
+      bottom: -2px;
+      left: 25px;
+      width: 172px;
+      height: 5px;
+      background-color: $color-default-white;
+    }
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  &__head h1 {
+    margin: 0;
+    color: $color-default-white;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    font-variant: all-small-caps;
+
+    @include vp-1023 {
+      font-size: 60px;
+      font-variant: normal;
+    }
+
+    @include vp-767 {
+      font-size: 36px;
+    }
+  }
+}
