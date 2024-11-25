@@ -1,0 +1,139 @@
+.land {
+  position: relative;
+  padding: 223px 126px 67px;
+  background-color: $color-solitude;
+  border-radius: 0 0 56px 56px;
+  z-index: 2;
+
+  @include vp-1023 {
+    background-color: $color-lavender;
+  }
+
+  @include vp-767 {
+
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  & h2 {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__countries {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__country {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__cont {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__megalist {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__megaitem {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__letter {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__list {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__item {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+
+  &__close {
+
+
+    @include vp-1023 {
+
+    }
+
+    @include vp-767 {
+
+    }
+  }
+}

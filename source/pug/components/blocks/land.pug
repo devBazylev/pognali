@@ -1,0 +1,14 @@
+mixin land()
+  section.land
+    .container
+      h2!= "Фильтрация по странам:"
+      .land__countries
+        label.land__country
+          input.visually-hidden(type="checkbox", name="qwe")
+      .land__cont
+        ul.land__megalist
+          li.land__megaitem
+            button.land__letter
+            ul.land__list
+              li.land__item
+        button.land__close
