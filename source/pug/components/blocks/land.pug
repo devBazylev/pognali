@@ -1,10 +1,10 @@
 mixin land()
   -
     const main = [
-      {mainland: "Европа"},
-      {mainland: "Азия"},
-      {mainland: "Америка"},
-      {mainland: "Острова"}
+      {mainland: "Европа", checkbox: "true"},
+      {mainland: "Азия", checkbox: "false"},
+      {mainland: "Америка", checkbox: "false"},
+      {mainland: "Острова", checkbox: "false"}
     ]
   -
     const mock = {
@@ -32,7 +32,7 @@ mixin land()
         {name: 'Бенин'},
         {name: 'Болгария'},
         {name: 'Боливия'},
-        {name: 'Босния и Герцеговина'},
+        {name: 'Босния и<br> Герцеговина'},
         {name: 'Ботсвана'},
         {name: 'Бразилия'},
         {name: 'Бруней'},
@@ -45,7 +45,7 @@ mixin land()
         {name: 'Великобритания'},
         {name: 'Венгрия'},
         {name: 'Венесуэла'},
-        {name: 'Восточный Тимор'},
+        {name: 'Восточный<br> Тимор'},
         {name: 'Вьетнам'}
       ],
       г: [
@@ -132,7 +132,7 @@ mixin land()
         {name: 'Нигерия'},
         {name: 'Нидерланды'},
         {name: 'Никарагуа'},
-        {name: 'Новая Зеландия'},
+        {name: 'Новая<br> Зеландия'},
         {name: 'Норвегия'}
       ],
       о: [
@@ -240,8 +240,11 @@ mixin land()
         .land__countries
           each item in main
             label.land__mainland!= item.mainland
-              input.visually-hidden(type="checkbox", name="qwe")
-        button.land__open!= "Показать все"
+              if (item.checkbox == "true")
+                input.visually-hidden(type="checkbox", name= item.mainland, checked)
+              else
+                input.visually-hidden(type="checkbox", name= item.mainland)
+        button.land__open!= "Показать&#160;все"
       .land__cont
         ul.land__megalist
           each data, headline in mock

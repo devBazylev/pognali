@@ -1,12 +1,13 @@
 .land {
   position: relative;
-  padding: 223px 126px 67px;
+  padding: 152px 60px 67px;
   background-color: $color-solitude;
   border-radius: 0 0 56px 56px;
   z-index: 2;
 
   @include vp-1023 {
     background-color: $color-lavender;
+    padding: 152px 60px 79px;
   }
 
   @include vp-767 {
@@ -14,26 +15,35 @@
   }
 
   .container {
-    padding: 0;
+    @include flex {
+      gap: 54px;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+      gap: 43px;
+    }
   }
 
 
   &__head {
     @include grid(auto, 1fr, auto) {
-      margin: 0 0 1px;
+      padding: 0 0 0 20px;
     }
 
     @include vp-1023 {
       grid-template-columns: 1fr auto;
+      padding: 0 0 0 7px;
     }
 
     @include vp-767 {
-      margin: 0 0 2px;
+      padding: 0 0 0 1px;
     }
   }
 
   &__title {
     @include flex(row) {
+      align-items: center;
       gap: 22px;
     }
 
@@ -62,13 +72,18 @@
     }
   }
 
+  &__title svg {
+    position: relative;
+    top: -3px;
+  }
+
   &__countries {
     @include flex(row) {
-      gap: 20px;
+      gap: 14px;
     }
 
     @include vp-1023 {
-      gap: 19px;
+      gap: 10px;
     }
 
     @include vp-767 {
@@ -78,17 +93,26 @@
   }
 
   &__mainland {
-    color: $color-midnight-express-3;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    text-transform: uppercase;
+    @include btn {
+      padding: 10px 5px;
+      color: $color-midnight-express-3;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      text-transform: uppercase;
+      transition: opacity $trans-300;
+      opacity: 0.3;
+    }
 
     @include vp-767 {
       font-size: 16px;
       line-height: 112%;
     }
+  }
+
+  &__mainland:has(> input:checked) {
+    opacity: 1;
   }
 
   &__open {
@@ -117,11 +141,12 @@
 
   &__cont {
     @include flex {
-      gap: 40px;
+      position: relative;
+      gap: 63px;
     }
 
     @include vp-1023 {
-      gap: 50px;
+      gap: 52px;
     }
 
     @include vp-767 {
@@ -131,20 +156,25 @@
 
   &__megalist {
     @include grid(1fr, 1fr, 1fr, 1fr, 1fr) {
-      gap: 20px 40px;
+      gap: 35px 40px;
       list-style: none;
       margin: 0;
+      padding: 0 74px 0 35px;
+    }
+
+    @include vp-1279 {
       padding: 0;
     }
 
     @include vp-1023 {
       gap: 0;
+      width: fit-content;
     }
   }
 
   &__megaitem {
     @include flex {
-      gap: 30px;
+      gap: 20px;
     }
 
     @include vp-1023 {
@@ -154,6 +184,8 @@
 
   &__letter {
     @include btn {
+      position: relative;
+      left: -8px;
       padding: 10px;
       color: $color-midnight-express-3;
       background-color: transparent;
@@ -165,28 +197,33 @@
     }
 
     @include vp-1023 {
-      width: 60px;
-      height: 70px;
+      left: unset;
+      width: 76px;
+      height: 83px;
       flex-shrink: 0;
       border-radius: 4px;
-      border: 1px solid $color-link-water;
+      border: 1px solid transparent;
     }
 
     @include vp-767 {
       width: 42px;
       height: 40px;
+      border: 1px solid $color-link-water;
     }
   }
 
   &__list {
     @include flex {
-      gap: 10px;
+      gap: 0;
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
     @include vp-1023 {
+      position: absolute;
+      top: 0;
+      right: 0;
       gap: 9px;
     }
 
@@ -211,7 +248,7 @@
   &__close {
     @include btn {
       width: 100%;
-      padding: 42px;
+      padding: 40px;
       border-radius: 20px;
       background-color: $color-hawkes-blue;
       color: $color-midnight-express-3;
@@ -223,6 +260,9 @@
     }
 
     @include vp-1023 {
+      width: unset;
+      margin: 0 16px;
+      padding: 40px 40px 35px;
       line-height: 125%;
     }
 
