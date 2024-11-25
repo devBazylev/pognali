@@ -13,6 +13,10 @@ const initServ = () => {
       intro.style.transform = `translate(0, ${coord}px)`;
       img.style.transform = `translate(0, ${coord}px)`;
     }
+
+    if (heightScrolled < activePosition) {
+      intro.style.transform = 'translate(0, 0)';
+    }
   };
 
   document.addEventListener('scroll', checkScrollRange);
