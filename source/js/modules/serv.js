@@ -1,6 +1,7 @@
 const initServ = () => {
   const intro = document.querySelector('.intro');
   const serv = document.querySelector('.serv');
+  const img = serv.querySelector('.serv__pic');
 
   const checkScrollRange = () => {
     const heightScrolled = window.scrollY;
@@ -10,6 +11,7 @@ const initServ = () => {
     if (heightScrolled > activePosition && heightScrolled < inactivePosition) {
       let coord = heightScrolled - activePosition;
       intro.style.transform = `translate(0, ${coord}px)`;
+      img.style.transform = `translate(0, ${coord}px)`;
     }
   };
 
