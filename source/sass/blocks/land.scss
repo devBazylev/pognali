@@ -1,176 +1,234 @@
-// .land {
-//   position: relative;
-//   padding: 223px 126px 67px;
-//   background-color: $color-solitude;
-//   border-radius: 0 0 56px 56px;
-//   z-index: 2;
-
-//   @include vp-1023 {
-//     background-color: $color-lavender;
-//   }
-
-//   @include vp-767 {
-
-//   }
-
-//   .container {
-//     padding: 0;
-//   }
-
-
-//   &__head {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__title {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__title h2 {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__countries {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__mainland {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__open {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__cont {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__megalist {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__megaitem {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__letter {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__list {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__item {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-
-//   &__close {
-
-
-//     @include vp-1023 {
-
-//     }
-
-//     @include vp-767 {
-
-//     }
-//   }
-// }
+.land {
+  position: relative;
+  padding: 223px 126px 67px;
+  background-color: $color-solitude;
+  border-radius: 0 0 56px 56px;
+  z-index: 2;
+
+  @include vp-1023 {
+    background-color: $color-lavender;
+  }
+
+  @include vp-767 {
+    padding: 111px 25px 67px;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+
+  &__head {
+    @include grid(auto, 1fr, auto) {
+      margin: 0 0 1px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 1fr auto;
+    }
+
+    @include vp-767 {
+      margin: 0 0 2px;
+    }
+  }
+
+  &__title {
+    @include flex(row) {
+      gap: 22px;
+    }
+
+    @include vp-1023 {
+      display: none;
+    }
+
+    @include vp-767 {
+      display: flex;
+      gap: 11px;
+    }
+  }
+
+  &__title h2 {
+    margin: 0;
+    color: $color-midnight-express-3;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 112%;
+    }
+  }
+
+  &__countries {
+    @include flex(row) {
+      gap: 20px;
+    }
+
+    @include vp-1023 {
+      gap: 19px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__mainland {
+    color: $color-midnight-express-3;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 112%;
+    }
+  }
+
+  &__open {
+    @include btn {
+      justify-content: space-between;
+      align-items: center;
+      width: 200px;
+      padding: 10px 20px;
+      color: $color-midnight-express-3;
+      background-color: transparent;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+
+    @include vp-1023 {
+      width: 150px;
+    }
+
+    @include vp-767 {
+      padding: 5px 10px;
+    }
+  }
+
+  &__cont {
+    @include flex {
+      gap: 40px;
+    }
+
+    @include vp-1023 {
+      gap: 50px;
+    }
+
+    @include vp-767 {
+      gap: 10px;
+    }
+  }
+
+  &__megalist {
+    @include grid(1fr, 1fr, 1fr, 1fr, 1fr) {
+      gap: 20px 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+      gap: 0;
+    }
+  }
+
+  &__megaitem {
+    @include flex {
+      gap: 30px;
+    }
+
+    @include vp-1023 {
+      gap: 0;
+    }
+  }
+
+  &__letter {
+    @include btn {
+      padding: 10px;
+      color: $color-midnight-express-3;
+      background-color: transparent;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+
+    @include vp-1023 {
+      width: 60px;
+      height: 70px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      border: 1px solid $color-link-water;
+    }
+
+    @include vp-767 {
+      width: 42px;
+      height: 40px;
+    }
+  }
+
+  &__list {
+    @include flex {
+      gap: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    @include vp-1023 {
+      gap: 9px;
+    }
+
+    @include vp-767 {
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    color: $color-charcoal;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 137%;
+    }
+  }
+
+  &__close {
+    @include btn {
+      width: 100%;
+      padding: 42px;
+      border-radius: 20px;
+      background-color: $color-hawkes-blue;
+      color: $color-midnight-express-3;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+
+    @include vp-1023 {
+      line-height: 125%;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      letter-spacing: 0.8px;
+    }
+  }
+}
