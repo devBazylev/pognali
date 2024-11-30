@@ -3,11 +3,12 @@ import {initServ} from './modules/serv';
 import {initWay} from './modules/way';
 import {initAdd} from './modules/add';
 import {initPry} from './modules/pry';
+import {initLand} from './modules/land';
 
 window.addEventListener('DOMContentLoaded', () => {
   const startHtml = '';
   const indexHtml = 'index.html';
-  // const catalogHtml = 'catalog.html';
+  const catalogHtml = 'catalog.html';
   const currentPage = window.location.pathname.split('/').pop();
 
   if (currentPage === startHtml) {
@@ -33,9 +34,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initPry();
   }
 
-  // if (currentPage === catalogHtml) {
-
-  // }
+  if (currentPage === catalogHtml) {
+    initLand();
+  }
 
   window.addEventListener('load', () => {
 

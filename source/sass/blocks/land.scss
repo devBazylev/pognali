@@ -119,7 +119,7 @@
     @include btn {
       justify-content: space-between;
       align-items: center;
-      width: 200px;
+      width: 250px;
       padding: 10px 20px;
       color: $color-midnight-express-3;
       background-color: transparent;
@@ -139,10 +139,42 @@
     }
   }
 
+  &__icon {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  &__icon > * {
+    margin: auto;
+    grid-area: 1/1/2/2;
+  }
+
+  .land__dots {
+    opacity: 1;
+  }
+
+  .land__cross {
+    opacity: 0;
+  }
+
+  &__open.is-active {
+    .land__dots {
+      opacity: 0;
+    }
+
+    .land__cross {
+      opacity: 1;
+    }
+  }
+
   &__cont {
     @include flex {
       position: relative;
       gap: 63px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height $trans-300, opacity $trans-300;
     }
 
     @include vp-1023 {
@@ -151,6 +183,11 @@
 
     @include vp-767 {
       gap: 10px;
+    }
+
+    &.is-active {
+      max-height: 1000vh;
+      opacity: 1;
     }
   }
 
@@ -233,6 +270,7 @@
   }
 
   &__item {
+    display: none;
     color: $color-charcoal;
     font-size: 20px;
     font-style: normal;
@@ -243,6 +281,10 @@
       font-size: 16px;
       line-height: 137%;
     }
+  }
+
+  &__item.is-active {
+    display: block;
   }
 
   &__close {
@@ -257,6 +299,7 @@
       font-weight: 700;
       line-height: 100%;
       text-transform: uppercase;
+      gap: 20px;
     }
 
     @include vp-1023 {

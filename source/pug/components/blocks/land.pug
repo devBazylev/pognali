@@ -1,225 +1,225 @@
 mixin land()
   -
     const main = [
-      {mainland: "Европа", checkbox: "true"},
-      {mainland: "Азия", checkbox: "false"},
-      {mainland: "Америка", checkbox: "false"},
-      {mainland: "Острова", checkbox: "false"}
+      {mainland: 'europe', mainlandText: "Европа", checkbox: "true"},
+      {mainland: 'asia', mainlandText: "Азия", checkbox: "false"},
+      {mainland: 'america', mainlandText: "Америка", checkbox: "false"},
+      {mainland: 'island', mainlandText: "Острова", checkbox: "false"}
     ]
   -
     const mock = {
       а: [
-        {name: 'Австралия'},
-        {name: 'Австрия'},
-        {name: 'Азербайджан'},
-        {name: 'Албания'},
-        {name: 'Алжир'},
-        {name: 'Ангола'},
-        {name: 'Андорра'},
-        {name: 'Антигуа и Барбуда'},
-        {name: 'Аргентина'},
-        {name: 'Армения'},
-        {name: 'Афганистан'}
+        {name: 'Австралия', mainland: 'island'},
+        {name: 'Австрия', mainland: 'europe'},
+        {name: 'Азербайджан', mainland: 'asia'},
+        {name: 'Албания', mainland: 'island'},
+        {name: 'Алжир', mainland: 'island'},
+        {name: 'Ангола', mainland: 'island'},
+        {name: 'Андорра', mainland: 'island'},
+        {name: 'Антигуа и Барбуда', mainland: 'island'},
+        {name: 'Аргентина', mainland: 'america'},
+        {name: 'Армения', mainland: 'asia'},
+        {name: 'Афганистан', mainland: 'asia'}
       ],
       б: [
-        {name: 'Багамские Острова'},
-        {name: 'Бангладеш'},
-        {name: 'Барбадос'},
-        {name: 'Бахрейн'},
-        {name: 'Беларусь'},
-        {name: 'Белиз'},
-        {name: 'Бельгия'},
-        {name: 'Бенин'},
-        {name: 'Болгария'},
-        {name: 'Боливия'},
-        {name: 'Босния и<br> Герцеговина'},
-        {name: 'Ботсвана'},
-        {name: 'Бразилия'},
-        {name: 'Бруней'},
-        {name: 'Буркина-Фасо'},
-        {name: 'Бурунди'},
-        {name: 'Бутан'}
+        {name: 'Багамские Острова', mainland: 'island'},
+        {name: 'Бангладеш', mainland: 'asia'},
+        {name: 'Барбадос', mainland: 'island'},
+        {name: 'Бахрейн', mainland: 'island'},
+        {name: 'Беларусь', mainland: 'europe'},
+        {name: 'Белиз', mainland: 'island'},
+        {name: 'Бельгия', mainland: 'europe'},
+        {name: 'Бенин', mainland: 'island'},
+        {name: 'Болгария', mainland: 'europe'},
+        {name: 'Боливия', mainland: 'america'},
+        {name: 'Босния и<br> Герцеговина', mainland: 'europe'},
+        {name: 'Ботсвана', mainland: 'island'},
+        {name: 'Бразилия', mainland: 'america'},
+        {name: 'Бруней', mainland: 'island'},
+        {name: 'Буркина-Фасо', mainland: 'island'},
+        {name: 'Бурунди', mainland: 'island'},
+        {name: 'Бутан', mainland: 'island'}
       ],
       в: [
-        {name: 'Вануату'},
-        {name: 'Великобритания'},
-        {name: 'Венгрия'},
-        {name: 'Венесуэла'},
-        {name: 'Восточный<br> Тимор'},
-        {name: 'Вьетнам'}
+        {name: 'Вануату', mainland: 'island'},
+        {name: 'Великобритания', mainland: 'europe'},
+        {name: 'Венгрия', mainland: 'europe'},
+        {name: 'Венесуэла', mainland: 'america'},
+        {name: 'Восточный<br> Тимор', mainland: 'island'},
+        {name: 'Вьетнам', mainland: 'asia'}
       ],
       г: [
-        {name: 'Габон'},
-        {name: 'Гаити'},
-        {name: 'Гайана'},
-        {name: 'Гамбия'},
-        {name: 'Гана'},
-        {name: 'Гватемала'},
-        {name: 'Гвинея'},
-        {name: 'Гвинея-Бисау'},
-        {name: 'Германия'},
-        {name: 'Гондурас'},
-        {name: 'Гренада'},
-        {name: 'Греция'},
-        {name: 'Грузия'}
+        {name: 'Габон', mainland: 'island'},
+        {name: 'Гаити', mainland: 'island'},
+        {name: 'Гайана', mainland: 'island'},
+        {name: 'Гамбия', mainland: 'island'},
+        {name: 'Гана', mainland: 'island'},
+        {name: 'Гватемала', mainland: 'asia'},
+        {name: 'Гвинея', mainland: 'island'},
+        {name: 'Гвинея-Бисау', mainland: 'island'},
+        {name: 'Германия', mainland: 'europe'},
+        {name: 'Гондурас', mainland: 'island'},
+        {name: 'Гренада', mainland: 'island'},
+        {name: 'Греция', mainland: 'europe'},
+        {name: 'Грузия', mainland: 'asia'}
       ],
       д: [
-        {name: 'Дания'},
-        {name: 'Джибути'},
-        {name: 'Доминика'},
-        {name: 'Доминикана'}
+        {name: 'Дания', mainland: 'europe'},
+        {name: 'Джибути', mainland: 'island'},
+        {name: 'Доминика', mainland: 'island'},
+        {name: 'Доминикана', mainland: 'island'}
       ],
       е: [
-        {name: 'Египет'}
+        {name: 'Египет', mainland: 'island'}
       ],
       з: [
-        {name: 'Замбия'},
-        {name: 'Зимбабве'}
+        {name: 'Замбия', mainland: 'island'},
+        {name: 'Зимбабве', mainland: 'island'}
       ],
       и: [
-        {name: 'Израиль'},
-        {name: 'Индия'},
-        {name: 'Индонезия'},
-        {name: 'Иордания'},
-        {name: 'Ирак'},
-        {name: 'Иран'},
-        {name: 'Ирландия'},
-        {name: 'Исландия'},
-        {name: 'Испания'},
-        {name: 'Италия'}
+        {name: 'Израиль', mainland: 'asia'},
+        {name: 'Индия', mainland: 'asia'},
+        {name: 'Индонезия', mainland: 'asia'},
+        {name: 'Иордания', mainland: 'asia'},
+        {name: 'Ирак', mainland: 'asia'},
+        {name: 'Иран', mainland: 'asia'},
+        {name: 'Ирландия', mainland: 'europe'},
+        {name: 'Исландия', mainland: 'europe'},
+        {name: 'Испания', mainland: 'europe'},
+        {name: 'Италия', mainland: 'europe'}
       ],
       к: [
-        {name: 'Кабо-Верде'},
-        {name: 'Казахстан'},
-        {name: 'Камбоджа'},
-        {name: 'Камерун'},
-        {name: 'Канада'},
-        {name: 'Катар'},
-        {name: 'Кения'},
-        {name: 'Кипр'},
-        {name: 'Киргизия'},
-        {name: 'Кирибати'},
-        {name: 'Китай'},
-        {name: 'Колумбия'}
+        {name: 'Кабо-Верде', mainland: 'island'},
+        {name: 'Казахстан', mainland: 'asia'},
+        {name: 'Камбоджа', mainland: 'asia'},
+        {name: 'Камерун', mainland: 'island'},
+        {name: 'Канада', mainland: 'america'},
+        {name: 'Катар', mainland: 'asia'},
+        {name: 'Кения', mainland: 'island'},
+        {name: 'Кипр', mainland: 'asia'},
+        {name: 'Киргизия', mainland: 'asia'},
+        {name: 'Кирибати', mainland: 'island'},
+        {name: 'Китай', mainland: 'asia'},
+        {name: 'Колумбия', mainland: 'america'}
       ],
       л: [
-        {name: 'Лаос'},
-        {name: 'Латвия'},
-        {name: 'Лесото'},
-        {name: 'Либерия'},
-        {name: 'Ливан'},
-        {name: 'Ливия'},
-        {name: 'Литва'},
-        {name: 'Лихтенштейн'},
-        {name: 'Люксембург'}
+        {name: 'Лаос', mainland: 'asia'},
+        {name: 'Латвия', mainland: 'europe'},
+        {name: 'Лесото', mainland: 'island'},
+        {name: 'Либерия', mainland: 'island'},
+        {name: 'Ливан', mainland: 'island'},
+        {name: 'Ливия', mainland: 'island'},
+        {name: 'Литва', mainland: 'europe'},
+        {name: 'Лихтенштейн', mainland: 'island'},
+        {name: 'Люксембург', mainland: 'europe'}
       ],
       м: [
-        {name: 'Маврикий'},
-        {name: 'Мавритания'},
-        {name: 'Мадагаскар'},
-        {name: 'Малави'},
-        {name: 'Малайзия'},
-        {name: 'Мали'},
-        {name: 'Мальдивы'},
-        {name: 'Мальта'},
-        {name: 'Марокко'}
+        {name: 'Маврикий', mainland: 'island'},
+        {name: 'Мавритания', mainland: 'island'},
+        {name: 'Мадагаскар', mainland: 'island'},
+        {name: 'Малави', mainland: 'island'},
+        {name: 'Малайзия', mainland: 'asia'},
+        {name: 'Мали', mainland: 'island'},
+        {name: 'Мальдивы', mainland: 'asia'},
+        {name: 'Мальта', mainland: 'asia'},
+        {name: 'Марокко', mainland: 'america'}
       ],
       н: [
-        {name: 'Намибия'},
-        {name: 'Науру'},
-        {name: 'Непал'},
-        {name: 'Нигер'},
-        {name: 'Нигерия'},
-        {name: 'Нидерланды'},
-        {name: 'Никарагуа'},
-        {name: 'Новая<br> Зеландия'},
-        {name: 'Норвегия'}
+        {name: 'Намибия', mainland: 'island'},
+        {name: 'Науру', mainland: 'island'},
+        {name: 'Непал', mainland: 'asia'},
+        {name: 'Нигер', mainland: 'island'},
+        {name: 'Нигерия', mainland: 'island'},
+        {name: 'Нидерланды', mainland: 'europe'},
+        {name: 'Никарагуа', mainland: 'america'},
+        {name: 'Новая<br> Зеландия', mainland: 'island'},
+        {name: 'Норвегия', mainland: 'europe'}
       ],
       о: [
-        {name: 'ОАЭ'},
-        {name: 'Оман'}
+        {name: 'ОАЭ', mainland: 'asia'},
+        {name: 'Оман', mainland: 'asia'}
       ],
       п: [
-        {name: 'Пакистан'},
-        {name: 'Палау'},
-        {name: 'Панама'},
-        {name: 'Папуа - Новая Гвинея'},
-        {name: 'Парагвай'},
-        {name: 'Перу'},
-        {name: 'Польша'},
-        {name: 'Португалия'}
+        {name: 'Пакистан', mainland: 'asia'},
+        {name: 'Палау', mainland: 'america'},
+        {name: 'Панама', mainland: 'america'},
+        {name: 'Папуа - Новая Гвинея', mainland: 'island'},
+        {name: 'Парагвай', mainland: 'america'},
+        {name: 'Перу', mainland: 'america'},
+        {name: 'Польша', mainland: 'europe'},
+        {name: 'Португалия', mainland: 'europe'}
       ],
       р: [
-        {name: 'Руанда'},
-        {name: 'Румыния'},
-        {name: 'Россия'}
+        {name: 'Руанда', mainland: 'island'},
+        {name: 'Румыния', mainland: 'europe'},
+        {name: 'Россия', mainland: 'asia'}
       ],
       с: [
-        {name: 'Сальвадор'},
-        {name: 'Самоа'},
-        {name: 'Сан-Марино'},
-        {name: 'Саудовская Аравия'},
-        {name: 'Сейшелы'},
-        {name: 'Сенегал'},
-        {name: 'Сербия'},
-        {name: 'Сингапур'},
-        {name: 'Сирия'},
-        {name: 'Словакия'},
-        {name: 'Словения'},
-        {name: 'США'}
+        {name: 'Сальвадор', mainland: 'america'},
+        {name: 'Самоа', mainland: 'island'},
+        {name: 'Сан-Марино', mainland: 'america'},
+        {name: 'Саудовская Аравия', mainland: 'asia'},
+        {name: 'Сейшелы', mainland: 'asia'},
+        {name: 'Сенегал', mainland: 'asia'},
+        {name: 'Сербия', mainland: 'europe'},
+        {name: 'Сингапур', mainland: 'asia'},
+        {name: 'Сирия', mainland: 'asia'},
+        {name: 'Словакия', mainland: 'europe'},
+        {name: 'Словения', mainland: 'europe'},
+        {name: 'США', mainland: 'america'}
       ],
       т: [
-        {name: 'Таджикистан'},
-        {name: 'Таиланд'},
-        {name: 'Танзания'},
-        {name: 'Того'},
-        {name: 'Тонга'},
-        {name: 'Тринидад и Тобаго'},
-        {name: 'Тувалу'},
-        {name: 'Тунис'},
-        {name: 'Туркмения'},
-        {name: 'Турция'}
+        {name: 'Таджикистан', mainland: 'asia'},
+        {name: 'Таиланд', mainland: 'asia'},
+        {name: 'Танзания', mainland: 'island'},
+        {name: 'Того', mainland: 'island'},
+        {name: 'Тонга', mainland: 'island'},
+        {name: 'Тринидад и Тобаго', mainland: 'america'},
+        {name: 'Тувалу', mainland: 'island'},
+        {name: 'Тунис', mainland: 'island'},
+        {name: 'Туркмения', mainland: 'asia'},
+        {name: 'Турция', mainland: 'asia'}
       ],
       у: [
-        {name: 'Уганда'},
-        {name: 'Узбекистан'},
-        {name: 'Украина'},
-        {name: 'Уругвай'}
+        {name: 'Уганда', mainland: 'america'},
+        {name: 'Узбекистан', mainland: 'asia'},
+        {name: 'Украина', mainland: 'europe'},
+        {name: 'Уругвай', mainland: 'america'}
       ],
       ф: [
-        {name: 'Фиджи'},
-        {name: 'Филиппины'},
-        {name: 'Финляндия'},
-        {name: 'Франция'}
+        {name: 'Фиджи', mainland: 'island'},
+        {name: 'Филиппины', mainland: 'asia'},
+        {name: 'Финляндия', mainland: 'europe'},
+        {name: 'Франция', mainland: 'europe'}
       ],
       х: [
-        {name: 'Хорватия'}
+        {name: 'Хорватия', mainland: 'europe'}
       ],
       ч: [
-        {name: 'Чад'},
-        {name: 'Черногория'},
-        {name: 'Чехия'},
-        {name: 'Чили'}
+        {name: 'Чад', mainland: 'island'},
+        {name: 'Черногория', mainland: 'asia'},
+        {name: 'Чехия', mainland: 'europe'},
+        {name: 'Чили', mainland: 'island'}
       ],
       ш: [
-        {name: 'Швейцария'},
-        {name: 'Швеция'},
-        {name: 'Шри-Ланка'}
+        {name: 'Швейцария', mainland: 'europe'},
+        {name: 'Швеция', mainland: 'europe'},
+        {name: 'Шри-Ланка', mainland: 'island'}
       ],
       э: [
-        {name: 'Эквадор'},
-        {name: 'Эритрея'},
-        {name: 'Эсватини'},
-        {name: 'Эстония'},
-        {name: 'Эфиопия'}
+        {name: 'Эквадор', mainland: 'island'},
+        {name: 'Эритрея', mainland: 'america'},
+        {name: 'Эсватини', mainland: 'island'},
+        {name: 'Эстония', mainland: 'europe'},
+        {name: 'Эфиопия', mainland: 'island'}
       ],
       ю: [
-        {name: 'ЮАР'},
-        {name: 'Южный Судан'}
+        {name: 'ЮАР', mainland: 'island'},
+        {name: 'Южный Судан', mainland: 'island'}
       ],
       я: [
-        {name: 'Ямайка'},
-        {name: 'Япония'}
+        {name: 'Ямайка', mainland: 'america'},
+        {name: 'Япония', mainland: 'island'}
       ],
     }
   section.land
@@ -239,12 +239,24 @@ mixin land()
           h2!= "Фильтрация по странам:"
         .land__countries
           each item in main
-            label.land__mainland!= item.mainland
+            label.land__mainland(class=`land__mainland--${item.mainland}`)!= item.mainlandText
               if (item.checkbox == "true")
                 input.visually-hidden(type="checkbox", name= item.mainland, checked)
               else
                 input.visually-hidden(type="checkbox", name= item.mainland)
-        button.land__open!= "Показать&#160;все"
+        button.land__open
+          span!= "Показать&#160;все"
+          .land__icon
+            svg.land__dots(xmlns="http://www.w3.org/2000/svg", width="34", height="6", viewBox="0 0 34 6", fill="none")
+              ellipse(cx="3.93515", cy="3", rx="3.34054", ry="3", fill="#192144")
+              ellipse(cx="17.2973", cy="3", rx="3.34054", ry="3", fill="#192144")
+              ellipse(cx="30.6595", cy="3", rx="3.34054", ry="3", fill="#192144")
+            svg.land__cross(xmlns="http://www.w3.org/2000/svg", width="25", height="22", viewBox="0 0 25 22", fill="none")
+              g
+                path(d="M21.5 2.75L3.5 19.25", stroke="#192144", stroke-width="2.8", stroke-linecap="round", stroke-linejoin="round")
+                path(d="M3.5 2.75L21.5 19.25", stroke="#192144", stroke-width="2.8", stroke-linecap="round", stroke-linejoin="round")
+              defs
+                rect(width="22", height="24", fill="white", transform="matrix(0 -1 1 0 0.5 22)")
       .land__cont
         ul.land__megalist
           each data, headline in mock
@@ -252,5 +264,12 @@ mixin land()
               button.land__letter!= headline
               ul.land__list
                 each item in data
-                  li.land__item!= item.name
-        button.land__close!= "Свернуть"
+                  li.land__item(class=`land__item--${item.mainland}`)!= item.name
+        button.land__close
+          svg(xmlns="http://www.w3.org/2000/svg", width="25", height="22", viewBox="0 0 25 22", fill="none")
+            g
+              path(d="M21.5 2.75L3.5 19.25", stroke="#192144", stroke-width="2.8", stroke-linecap="round", stroke-linejoin="round")
+              path(d="M3.5 2.75L21.5 19.25", stroke="#192144", stroke-width="2.8", stroke-linecap="round", stroke-linejoin="round")
+            defs
+              rect(width="22", height="24", fill="white", transform="matrix(0 -1 1 0 0.5 22)")
+          span!= "Свернуть"
