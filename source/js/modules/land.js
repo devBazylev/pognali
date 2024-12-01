@@ -1,4 +1,4 @@
-import {addClassArray, removeClassArray, tab} from '../utils/util.js';
+import {mob, tab, addClassArray, removeClassArray} from '../utils/util.js';
 
 const initLand = () => {
   const land = document.querySelector('.land');
@@ -17,7 +17,7 @@ const initLand = () => {
   const asiaBtn = land.querySelector('.land__mainland--asia input');
   const americaBtn = land.querySelector('.land__mainland--america input');
   const megaItems = land.querySelectorAll('.land__megaitem');
-  const landMegalist = land.querySelector('.land__megalist');
+  const megalist = land.querySelector('.land__megalist');
 
   megaItems.forEach((megaItem) => {
     const letter = megaItem.querySelector('.land__letter');
@@ -30,11 +30,11 @@ const initLand = () => {
       });
       megaItem.classList.add('is-active');
       if (tab.matches) {
-        if (landList.offsetHeight > landMegalist.offsetHeight) {
-          const subtraction = landList.offsetHeight - landMegalist.offsetHeight;
-          landMegalist.style.padding = `0 0 ${subtraction}px`;
+        if (landList.offsetHeight > megalist.offsetHeight) {
+          const subtraction = landList.offsetHeight - megalist.offsetHeight;
+          megalist.style.padding = `0 0 ${subtraction}px`;
         } else {
-          landMegalist.style.padding = 'unset';
+          megalist.style.padding = 'unset';
         }
       }
     });
@@ -68,15 +68,18 @@ const initLand = () => {
       if (tab.matches) {
         if (megaItem.classList.contains('is-active')) {
           const landList = megaItem.querySelector('.land__list');
-          if (landList.offsetHeight > landMegalist.offsetHeight) {
-            const subtraction = landList.offsetHeight - landMegalist.offsetHeight;
-            landMegalist.style.padding = `0 0 ${subtraction}px`;
+          if (landList.offsetHeight > megalist.offsetHeight) {
+            const subtraction = landList.offsetHeight - megalist.offsetHeight;
+            megalist.style.padding = `0 0 ${subtraction}px`;
           } else {
-            landMegalist.style.padding = 'unset';
+            megalist.style.padding = 'unset';
           }
         }
       }
     });
+    if (tab.matches || mob.matches) {
+      megaItems[0].classList.add('is-active');
+    }
   };
 
   const toggleCont = () => {
