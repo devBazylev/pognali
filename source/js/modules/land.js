@@ -2,6 +2,7 @@ import {mob, tab, addClassArray, removeClassArray} from '../utils/util.js';
 
 const initLand = () => {
   const land = document.querySelector('.land');
+  const head = land.querySelector('.land__head');
   const cont = land.querySelector('.land__cont');
   const open = land.querySelector('.land__open');
   const openText = land.querySelector('.land__open span');
@@ -37,6 +38,12 @@ const initLand = () => {
           megalist.style.padding = 'unset';
         }
       }
+      if (mob.matches) {
+        if (megaItem.classList.contains('is-active')) {
+          const listHeight = landList.offsetHeight;
+          megalist.style.padding = `0 0 ${listHeight}px`;
+        }
+      }
     });
   });
 
@@ -65,9 +72,9 @@ const initLand = () => {
       addClassArray(countries, 'is-active');
     }
     megaItems.forEach((megaItem) => {
+      const landList = megaItem.querySelector('.land__list');
       if (tab.matches) {
         if (megaItem.classList.contains('is-active')) {
-          const landList = megaItem.querySelector('.land__list');
           if (landList.offsetHeight > megalist.offsetHeight) {
             const subtraction = landList.offsetHeight - megalist.offsetHeight;
             megalist.style.padding = `0 0 ${subtraction}px`;
@@ -76,11 +83,18 @@ const initLand = () => {
           }
         }
       }
+      if (mob.matches) {
+        if (megaItem.classList.contains('is-active')) {
+          const listHeight = landList.offsetHeight;
+          megalist.style.padding = `0 0 ${listHeight}px`;
+        }
+      }
     });
-    if (tab.matches || mob.matches) {
-      megaItems[0].classList.add('is-active');
-    }
   };
+
+  if (tab.matches || mob.matches) {
+    megaItems[0].classList.add('is-active');
+  }
 
   const toggleCont = () => {
     cont.classList.toggle('is-active');
@@ -105,6 +119,13 @@ const initLand = () => {
   close.addEventListener('click', onClose);
   mainlandBtns.forEach((btn) => {
     btn.addEventListener('click', filterCountries);
+  });
+  head.addEventListener('click', () => {
+    if (mob.matches) {
+      head.classList.toggle('is-active');
+      open.classList.toggle('is-active');
+      cont.classList.toggle('is-active');
+    }
   });
 
   filterCountries();

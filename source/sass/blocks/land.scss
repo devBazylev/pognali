@@ -11,7 +11,8 @@
   }
 
   @include vp-767 {
-    padding: 111px 25px 67px;
+    padding: 120px 25px 13px;
+    border-radius: 0 0 20px 20px;
   }
 
   .container {
@@ -22,6 +23,10 @@
 
     @include vp-1023 {
       gap: 39px;
+    }
+
+    @include vp-767 {
+      gap: 0;
     }
   }
 
@@ -37,6 +42,7 @@
     }
 
     @include vp-767 {
+      grid-auto-flow: dense;
       padding: 0 0 0 1px;
     }
   }
@@ -53,7 +59,7 @@
 
     @include vp-767 {
       display: flex;
-      gap: 11px;
+      gap: 10px;
     }
   }
 
@@ -75,6 +81,10 @@
   &__title svg {
     position: relative;
     top: -3px;
+
+    @include vp-767 {
+      width: 15px;
+    }
   }
 
   &__countries {
@@ -87,9 +97,20 @@
     }
 
     @include vp-767 {
+      grid-column: 1/2;
       flex-direction: column;
-      gap: 20px;
+      gap: 0;
+      max-height: 0;
+      padding: 0 19px 0;
+      opacity: 0;
+      transition: opacity $trans-300, max-height $trans-300, padding $trans-300;
     }
+  }
+
+  &__head.is-active &__countries {
+    max-height: 1000vh;
+    opacity: 1;
+    padding: 27px 19px 11px;
   }
 
   &__mainland {
@@ -106,6 +127,7 @@
     }
 
     @include vp-767 {
+      padding: 4px 5px 5px;
       font-size: 16px;
       line-height: 112%;
     }
@@ -120,6 +142,7 @@
       position: relative;
       justify-content: space-between;
       align-items: center;
+      gap: 26px;
       width: fit-content;
       max-width: 300px;
       padding: 10px 20px;
@@ -134,18 +157,30 @@
 
     @include vp-1023 {
       left: 16px;
-      gap: 26px;
       padding: 10px 8px;
     }
 
     @include vp-767 {
-      padding: 5px 10px;
+      padding: 0;
+      left: 0;
+      gap: 0;
+      pointer-events: none;
+    }
+
+    span {
+      @include vp-767 {
+        display: none;
+      }
     }
   }
 
   &__icon {
     display: grid;
     grid-template-columns: 1fr;
+
+    @include vp-767 {
+
+    }
   }
 
   &__icon > * {
@@ -155,10 +190,18 @@
 
   .land__dots {
     opacity: 1;
+
+    @include vp-767 {
+      width: 18px;
+    }
   }
 
   .land__cross {
     opacity: 0;
+
+    @include vp-767 {
+      width: 18px;
+    }
   }
 
   &__open.is-active {
@@ -174,7 +217,7 @@
   &__cont {
     @include flex {
       position: relative;
-      gap: 63px;
+      gap: 60px;
       max-height: 0;
       opacity: 0;
       overflow: hidden;
@@ -186,13 +229,17 @@
     }
 
     @include vp-767 {
-      gap: 10px;
+      padding: 0 25px 0 25px;
     }
 
     &.is-active {
       max-height: 1000vh;
       opacity: 1;
       padding: 0 0 77px;
+
+      @include vp-767 {
+        padding: 5px 25px 77px 25px;
+      }
     }
   }
 
@@ -210,7 +257,12 @@
 
     @include vp-1023 {
       gap: 0;
-      width: fit-content;
+      width: 58%;
+    }
+
+    @include vp-767 {
+      position: relative;
+      width: 100%;
     }
   }
 
@@ -221,6 +273,10 @@
 
     @include vp-1023 {
       gap: 0;
+    }
+
+    @include vp-767 {
+      background-color: $color-default-white;
     }
   }
 
@@ -250,9 +306,11 @@
     }
 
     @include vp-767 {
-      width: 42px;
-      height: 40px;
+      width: 44px;
+      height: 41px;
       border: 1px solid $color-link-water;
+      border-radius: 0;
+      font-size: 16px;
     }
   }
 
@@ -272,7 +330,10 @@
     }
 
     @include vp-767 {
-      gap: 8px;
+      gap: 0;
+      top: unset;
+      left: 0;
+      bottom: -15px;
     }
   }
 
@@ -283,6 +344,18 @@
   }
 
   &__megaitem.is-active &__letter {
+    @include vp-1023 {
+      opacity: 1;
+    }
+
+    @include vp-767 {
+      background-color: $color-catalina-blue;
+      border: 1px solid $color-catalina-blue;
+      color: $color-default-white;
+    }
+  }
+
+  &__megaitem.is-active {
     @include vp-1023 {
       opacity: 1;
     }
