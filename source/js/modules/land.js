@@ -1,4 +1,4 @@
-import {addClassArray, removeClassArray} from '../utils/util.js';
+import {addClassArray, removeClassArray, tab} from '../utils/util.js';
 
 const initLand = () => {
   const land = document.querySelector('.land');
@@ -16,6 +16,29 @@ const initLand = () => {
   const europeBtn = land.querySelector('.land__mainland--europe input');
   const asiaBtn = land.querySelector('.land__mainland--asia input');
   const americaBtn = land.querySelector('.land__mainland--america input');
+  const megaItems = land.querySelectorAll('.land__megaitem');
+  const landMegalist = land.querySelector('.land__megalist');
+
+  megaItems.forEach((megaItem) => {
+    const letter = megaItem.querySelector('.land__letter');
+    letter.addEventListener('click', () => {
+      const landList = megaItem.querySelector('.land__list');
+      megaItems.forEach((elem) => {
+        if (elem.classList.contains('is-active')) {
+          elem.classList.remove('is-active');
+        }
+      });
+      megaItem.classList.add('is-active');
+      if (tab.matches) {
+        if (landList.offsetHeight > landMegalist.offsetHeight) {
+          const subtraction = landList.offsetHeight - landMegalist.offsetHeight;
+          landMegalist.style.padding = `0 0 ${subtraction}px`;
+        } else {
+          landMegalist.style.padding = 'unset';
+        }
+      }
+    });
+  });
 
   const filterCountries = () => {
     if (islandBtn.checked) {
@@ -41,6 +64,19 @@ const initLand = () => {
     if (!islandBtn.checked && !europeBtn.checked && !asiaBtn.checked && !americaBtn.checked) {
       addClassArray(countries, 'is-active');
     }
+    megaItems.forEach((megaItem) => {
+      if (tab.matches) {
+        if (megaItem.classList.contains('is-active')) {
+          const landList = megaItem.querySelector('.land__list');
+          if (landList.offsetHeight > landMegalist.offsetHeight) {
+            const subtraction = landList.offsetHeight - landMegalist.offsetHeight;
+            landMegalist.style.padding = `0 0 ${subtraction}px`;
+          } else {
+            landMegalist.style.padding = 'unset';
+          }
+        }
+      }
+    });
   };
 
   const toggleCont = () => {

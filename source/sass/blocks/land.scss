@@ -7,7 +7,7 @@
 
   @include vp-1023 {
     background-color: $color-lavender;
-    padding: 152px 60px 79px;
+    padding: 152px 60px 2px;
   }
 
   @include vp-767 {
@@ -21,7 +21,7 @@
     }
 
     @include vp-1023 {
-      gap: 43px;
+      gap: 39px;
     }
   }
 
@@ -117,9 +117,11 @@
 
   &__open {
     @include btn {
+      position: relative;
       justify-content: space-between;
       align-items: center;
-      width: 250px;
+      width: fit-content;
+      max-width: 300px;
       padding: 10px 20px;
       color: $color-midnight-express-3;
       background-color: transparent;
@@ -131,7 +133,9 @@
     }
 
     @include vp-1023 {
-      width: 150px;
+      left: 16px;
+      gap: 26px;
+      padding: 10px 8px;
     }
 
     @include vp-767 {
@@ -174,11 +178,11 @@
       max-height: 0;
       opacity: 0;
       overflow: hidden;
-      transition: max-height $trans-300, opacity $trans-300;
+      transition: max-height $trans-300, opacity $trans-300, padding $trans-300;
     }
 
     @include vp-1023 {
-      gap: 52px;
+      gap: 54px;
     }
 
     @include vp-767 {
@@ -188,6 +192,7 @@
     &.is-active {
       max-height: 1000vh;
       opacity: 1;
+      padding: 0 0 77px;
     }
   }
 
@@ -240,6 +245,8 @@
       flex-shrink: 0;
       border-radius: 4px;
       border: 1px solid transparent;
+      opacity: 0.3;
+      transition: opacity $trans-300;
     }
 
     @include vp-767 {
@@ -259,13 +266,25 @@
 
     @include vp-1023 {
       position: absolute;
-      top: 0;
-      right: 0;
-      gap: 9px;
+      display: none;
+      top: 9px;
+      left: 71%;
     }
 
     @include vp-767 {
       gap: 8px;
+    }
+  }
+
+  &__megaitem.is-active &__list {
+    @include vp-1023 {
+      display: flex;
+    }
+  }
+
+  &__megaitem.is-active &__letter {
+    @include vp-1023 {
+      opacity: 1;
     }
   }
 
