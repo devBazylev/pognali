@@ -83,7 +83,7 @@
   &__cont h1 {
     height: fit-content;
     margin: 0;
-    padding: 87px 0 0;
+    padding: 87px 0 250px;
     color: $color-default-white;
     font-size: 70px;
     font-style: normal;
@@ -111,6 +111,7 @@
   &__pic {
     width: 431px;
     height: 640px;
+    margin: auto 0 0;
 
     @include vp-1023 {
       width: 437px;
