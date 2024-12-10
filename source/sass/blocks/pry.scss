@@ -309,6 +309,7 @@
   &__tel,
   &__mail {
     @include btn {
+      flex-wrap: nowrap;
       gap: 31px;
       color: $color-pattens-blue;
       font-size: 28px;
