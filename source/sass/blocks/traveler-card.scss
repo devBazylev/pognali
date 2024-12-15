@@ -2,7 +2,9 @@
   width: 100%;
   margin-bottom: 31px;
   overflow: hidden;
+  border-radius: 20px;
   min-width: 0;
+  transition: box-shadow 0.3s linear;
 
   @include vp-1023 {
     min-width: 0;
@@ -11,6 +13,10 @@
 
   @include vp-767 {
     margin-bottom: 10px;
+  }
+
+  @include hover-focus {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
   }
 
   &__link {
@@ -22,6 +28,7 @@
     width: 100%;
     background: $color-default-white;
     border-radius: 20px;
+    overflow: hidden;
 
     @include vp-1023 {
       display: grid;
@@ -37,12 +44,7 @@
       column-gap: 15px;
       grid-template-columns: 70px 1fr;
       grid-template-rows: min-content min-content min-content min-content;
-
       height: auto;
-    }
-
-    @include hover-focus {
-      box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
     }
   }
 
