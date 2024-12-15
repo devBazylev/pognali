@@ -1,0 +1,124 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background-color: $color-default-white;
+  border-radius: 20px;
+
+  min-height: 100px;
+
+  padding: 26px 27px 24px 29px;
+
+  @include vp-1023 {
+    padding: 26px 19px 24px 29px;
+  }
+
+  @include vp-767 {
+    border-radius: 20px;
+    min-height: 51px;
+    padding: 7px 48px 4px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__button {
+    min-width: 50px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: $color-accent-second;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    @include hover-focus {
+      background-color: $color-contacts-hover;
+      color: rgba($color-accent-second, 0.6);
+    }
+
+    &--active,
+    &:active {
+      background-color: $color-contacts-hover;
+
+      @include hover-focus {
+        background-color: $color-contacts-hover;
+        color: rgba($color-accent-second, 0.6);
+      }
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 5px;
+
+    @include vp-767 {
+      position: relative;
+      justify-content: space-between;
+      gap: 0;
+      width: 100%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1px;
+        height: 200%;
+        background-color: $color-background;
+      }
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    @include hover-focus {
+      opacity: 0.6;
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    &--prev {
+      transform: rotate(180deg);
+    }
+  }
+}

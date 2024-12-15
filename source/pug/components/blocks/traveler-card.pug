@@ -1,0 +1,202 @@
+-
+  const travelersData = [
+      {
+      name: 'Таня Фирсова',
+      modifier: 'firsova',
+      isOnline: false,
+      flags: [
+        { path: 'flags', image: 'sri-lanka', format: 'png', width: 35, height: 25, alt: 'Флаг Шри-Ланка' },
+        { path: 'flags', image: 'thailand', format: 'png', width: 35, height: 25, alt: 'Флаг Таиланд' },
+        { path: 'flags', image: 'seychelles', format: 'png', width: 35, height: 25, alt: 'Флаг Сейшел' }
+      ],
+      tags: '#ЗОЖ #ПП #Фитнес #пляж&nbsp; #авокадо #смузи',
+      rating: '99',
+      likes: '',
+      image: {
+        path: 'content',
+        image: '1-traveler',
+        format: 'jpg',
+        desktopWidth: 285,
+        desktopHeight: 285,
+        tabletWidth: 285,
+        tabletHeight: 285,
+        mobileWidth: 270,
+        mobileHeight: 270,
+        alt: 'Фото Тани Фирсовой'
+      },
+      transport: [
+        { path: 'svg', image: 'plane', format: 'svg', width: 22, height: 22, alt: 'Самолет' },
+        { path: 'svg', image: 'bus', format: 'svg', width: 18, height: 20, alt: 'Автобус', modifier: 'inactive' },
+        { path: 'svg', image: 'bicycle', format: 'svg', width: 22, height: 24, alt: 'Велосипед', modifier: 'inactive' },
+        { path: 'svg', image: 'run', format: 'svg', width: 25, height: 25, alt: 'Бег', modifier: 'inactive' },
+      ]
+    },
+    {
+      name: 'Петя Демин',
+      modifier: 'demin',
+      isOnline: false,
+      flags: [
+        { path: 'flags', image: 'belgium', format: 'png', width: 35, height: 25, alt: 'Флаг Бельгия' },
+        { path: 'flags', image: 'czech', format: 'png', width: 35, height: 25, alt: 'Флаг Чехия' }
+      ],
+      tags: '#бургер #бар #футбол #концерт #крафт',
+      rating: '80',
+      likes: '1500',
+      image: {
+        path: 'content',
+        image: '2-traveler',
+        format: 'jpg',
+        desktopWidth: 285,
+        desktopHeight: 285,
+        tabletWidth: 285,
+        tabletHeight: 285,
+        mobileWidth: 270,
+        mobileHeight: 270,
+        alt: 'Фото Пети Демина'
+      },
+      transport: [
+        { path: 'svg', image: 'plane', format: 'svg', width: 22, height: 22, alt: 'Самолет' },
+        { path: 'svg', image: 'bus', format: 'svg', width: 18, height: 20, alt: 'Автобус' },
+        { path: 'svg', image: 'bicycle', format: 'svg', width: 22, height: 24, alt: 'Велосипед', modifier: 'inactive' },
+        { path: 'svg', image: 'run', format: 'svg', width: 25, height: 25, alt: 'Бег' },
+      ]
+    },
+    {
+      name: 'Марк Смолов',
+      modifier: 'smolov',
+      isOnline: false,
+      flags: [
+        { path: 'flags', image: 'usa', format: 'png', width: 35, height: 25, alt: 'Флаг США' },
+        { path: 'flags', image: 'australia', format: 'png', width: 35, height: 25, alt: 'Флаг Австралия' },
+        { path: 'flags', image: 'dominica', format: 'png', width: 35, height: 25, alt: 'Флаг Доминика' }
+      ],
+      tags: '#рэп #тату #хайпбист #кроссовки #суприм',
+      rating: '25',
+      likes: '170',
+      image: {
+        path: 'content',
+        image: '3-traveler',
+        format: 'jpg',
+        desktopWidth: 285,
+        desktopHeight: 285,
+        tabletWidth: 285,
+        tabletHeight: 285,
+        mobileWidth: 270,
+        mobileHeight: 270,
+        alt: 'Фото Марка Смолова'
+      },
+      transport: [
+        { path: 'svg', image: 'plane', format: 'svg', width: 22, height: 22, alt: 'Самолет' },
+        { path: 'svg', image: 'bus', format: 'svg', width: 18, height: 20, alt: 'Автобус', modifier: 'inactive' },
+        { path: 'svg', image: 'bicycle', format: 'svg', width: 22, height: 24, alt: 'Велосипед' },
+        { path: 'svg', image: 'run', format: 'svg', width: 25, height: 25, alt: 'Бег', modifier: 'inactive' },
+      ]
+    },
+    {
+      name: 'Лариса Роговая',
+      modifier: 'rogovaya',
+      isOnline: true,
+      flags: [
+        { path: 'flags', image: 'uk', format: 'png', width: 35, height: 25, alt: 'Флаг Великобритания' },
+        { path: 'flags', image: 'germany', format: 'png', width: 35, height: 25, alt: 'Флаг Германия' }
+      ],
+      tags: '#образование #карьера #учеба&nbsp;#линкедин',
+      rating: '50',
+      likes: '23',
+      image: {
+        path: 'content',
+        image: '4-traveler',
+        format: 'jpg',
+        desktopWidth: 285,
+        desktopHeight: 285,
+        tabletWidth: 285,
+        tabletHeight: 285,
+        mobileWidth: 270,
+        mobileHeight: 270,
+        alt: 'Фото Ларисы Роговой'
+      },
+      transport: [
+        { path: 'svg', image: 'plane', format: 'svg', width: 22, height: 22, alt: 'Самолет' },
+        { path: 'svg', image: 'bus', format: 'svg', width: 18, height: 20, alt: 'Автобус' },
+        { path: 'svg', image: 'bicycle', format: 'svg', width: 22, height: 24, alt: 'Велосипед', modifier: 'inactive' },
+        { path: 'svg', image: 'run', format: 'svg', width: 25, height: 25, alt: 'Бег', modifier: 'inactive' },
+      ]
+    },
+    {
+      name: 'Кот Кекс',
+      modifier: 'keks',
+      isOnline: false,
+      flags: [
+        { path: 'flags', image: 'sri-lanka', format: 'png', width: 35, height: 25, alt: 'Флаг Шри-Ланка' },
+        { path: 'flags', image: 'thailand', format: 'png', width: 35, height: 25, alt: 'Флаг Таиланд' },
+        { path: 'flags', image: 'seychelles', format: 'png', width: 35, height: 25, alt: 'Флаг Сейшел' }
+      ],
+      tags: '#еда #спать #играть #мурчать #тыгыдык',
+      rating: '99',
+      likes: '10000',
+      image: {
+        path: 'content',
+        image: '5-traveler',
+        format: 'jpg',
+        desktopWidth: 285,
+        desktopHeight: 285,
+        tabletWidth: 285,
+        tabletHeight: 285,
+        mobileWidth: 270,
+        mobileHeight: 270,
+        alt: 'Фото Кекса'
+      },
+      transport: [
+        { path: 'svg', image: 'plane', format: 'svg', width: 22, height: 22, alt: 'Самолет', modifier: 'inactive'  },
+        { path: 'svg', image: 'bus', format: 'svg', width: 18, height: 20, alt: 'Автобус', modifier: 'inactive' },
+        { path: 'svg', image: 'bicycle', format: 'svg', width: 22, height: 24, alt: 'Велосипед', modifier: 'inactive' },
+        { path: 'svg', image: 'run', format: 'svg', width: 25, height: 25, alt: 'Бег'},
+      ]
+    },
+
+  ]
+
+mixin traveler-card(props)
+  - const { name, flags, tags, rating, image, transport, likes, modifier, isOnline } = props
+  li.traveler-card
+    article.traveler-card__link
+      .traveler-card__image-wrapper
+        +picture(image.path, image.image, image.format, image.desktopWidth, image.desktopHeight, image.tabletWidth, image.tabletHeight, image.mobileWidth, image.mobileHeight, image.alt)
+
+      h3.traveler-card__name(class=`traveler-card__name--${isOnline ? 'online' : 'offline'}`)= name
+
+      if likes !== ''
+        .traveler-card__likes
+          .traveler-card__likes-icon
+            +img2("svg", "heart", "svg", 20, 20, "")
+          span.traveler-card__likes-count= likes
+
+      p.traveler-card__tags!= tags
+
+      .traveler-card__side-content
+        .traveler-card__flags-title
+          span хочет&nbsp;посетить:
+        .traveler-card__flags-wrapper
+          each flag, index in flags
+            - const flagName = flag.image.toLowerCase()
+            .traveler-card__flag-item(class=`traveler-card__flag-item--${flagName}`)
+              .traveler-card__flag
+                +picture(flag.path, flag.image, flag.format, 35, 25, 35, 24, 26, 18, flag.alt)
+              span.traveler-card__country-name= flag.alt.replace('Флаг ', '').toUpperCase()
+
+      .traveler-card__bottom-content
+        .traveler-card__transport-title
+          span транспорт:
+        ul.traveler-card__transport
+          each item in transport
+            li.traveler-card__transport-item(class=item.modifier ? `traveler-card__transport-item--${item.modifier}` : '')
+              +img2(item.path, item.image, item.format, item.width, item.height, item.alt)
+        .traveler-card__level-title
+          span левел:
+        .traveler-card__rating(class=`traveler-card__rating--${rating}`)
+          span.traveler-card__rating-number= rating
+          span.traveler-card__rating-text level
+
+      if likes !== ''
+        .traveler-card__actions
+          button.traveler-card__invite-button(type="button") Позвать!

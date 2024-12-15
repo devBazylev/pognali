@@ -1,0 +1,70 @@
+mixin travelers-filter()
+  -
+    const filterSections = [
+      {
+        title: "Хобби",
+        name: "hobby",
+        items: ["Спортзал", "Кальян", "Диван"]
+      },
+      {
+        title: "Музыка",
+        name: "music",
+        items: ["Тяжелый рок", "Русский рэп", "Евроденс"]
+      },
+      {
+        title: "Еда",
+        name: "food",
+        items: ["Мясоед", "Сидит на ПП", "Веган-сыроед"]
+      }
+    ]
+
+  .travelers-filter.container(data-travelers-filter)
+    h2.travelers-filter__title Подберите идеального попутчика
+    form.travelers-filter__form
+      each section in filterSections
+        .travelers-filter__section(data-filter-section)
+          .travelers-filter__header
+            h3.travelers-filter__subtitle= section.title
+            button.travelers-filter__toggle(type="button", aria-label="Развернуть", data-filter-toggle)
+              +icon("arrow")(width="10", height="6")
+          ul.travelers-filter__list(data-filter-list)
+            each item, index in section.items
+              li.travelers-filter__item
+                +custom-toggle({
+                  inputName: section.name,
+                  inputLabel: item,
+                  inputType: "checkbox",
+                  inputValue: item,
+                  inputChecked: index === 0
+                }).custom-toggle--checkbox
+
+      .travelers-filter__section.travelers-filter__section--transport(data-filter-section)
+        .travelers-filter__header
+          h3.travelers-filter__subtitle транспорт
+          button.travelers-filter__toggle(type="button", aria-label="Развернуть", data-filter-toggle)
+            +icon("arrow")(width="10", height="6")
+        ul.travelers-filter__transport(data-filter-list)
+          - const checkedTransport = ["plane", "car", "walk"]
+          each transport in ["plane", "car", "bicycle", "walk"]
+            li.travelers-filter__transport-item
+              .travelers-filter__transport-checkbox
+                input(type="checkbox", id=`transport-${transport}`, name="transport", value=transport, checked=checkedTransport.includes(transport))
+                label.travelers-filter__transport-checkbox-label(for=`transport-${transport}`)
+                  +img2("svg", transport, "svg", 23, 22, "")
+
+      .travelers-filter__section.travelers-filter__section--level(data-filter-section)
+        .travelers-filter__header
+          h3.travelers-filter__subtitle левел
+          button.travelers-filter__toggle(type="button", aria-label="Развернуть", data-filter-toggle)
+            +icon("arrow")(width="10", height="6")
+        .travelers-filter__level(data-filter-list)
+          .travelers-filter__values
+            span.travelers-filter__value 30
+            span.travelers-filter__value 100
+          .travelers-filter__slider
+            .travelers-filter__range-slider
+              input.travelers-filter__range-min(type="range", min="0", max="100", value="30")
+              input.travelers-filter__range-max(type="range", min="0", max="100", value="100")
+
+
+      button.travelers-filter__submit(type="submit") Показать

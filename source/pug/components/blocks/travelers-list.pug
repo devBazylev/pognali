@@ -1,0 +1,36 @@
+mixin travelers-list()
+  .travelers-list
+    ul.travelers-list__list
+      each traveler in travelersData
+        +traveler-card({
+          name: traveler.name,
+          flags: traveler.flags,
+          tags: traveler.tags,
+          rating: traveler.rating,
+          image: traveler.image,
+          transport: traveler.transport,
+          likes: traveler.likes,
+          modifier: traveler.modifier,
+          isOnline: traveler.isOnline
+        })
+
+    button.travelers-list__show-more(type="button", data-show-more)
+      +icon("plus", 26, 26)
+      span Показать ещё
+
+    .travelers-list__pagination.pagination
+      ul.pagination__list
+        li.pagination__item
+          button.pagination__button.pagination__button--active(type="button", aria-label="Страница 1") 1
+        li.pagination__item
+          button.pagination__button(type="button", aria-label="Страница 2") 2
+        li.pagination__item
+          button.pagination__button(type="button", aria-label="Страница 3") 3
+        li.pagination__item
+          button.pagination__button(type="button", aria-label="Страница 4") 4
+
+      .pagination__nav
+        button.pagination__arrow.pagination__arrow--prev(type="button", aria-label="Предыдущая страница")
+          +icon("arrow-right", 10, 18)
+        button.pagination__arrow.pagination__arrow--next(type="button", aria-label="Следующая страница")
+          +icon("arrow-right", 10, 18)

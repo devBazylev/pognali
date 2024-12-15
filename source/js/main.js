@@ -4,6 +4,8 @@ import {initWay} from './modules/way';
 import {initAdd} from './modules/add';
 import {initPry} from './modules/pry';
 import {initLand} from './modules/land';
+import {initTravelersFilter} from './modules/travelers-filter/init-travelers-filter';
+import {initTravelersPagination} from './modules/travelers-pagination';
 
 window.addEventListener('DOMContentLoaded', () => {
   const startHtml = '';
@@ -36,6 +38,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (currentPage === catalogHtml) {
     initLand();
+    initTravelersFilter();
+    initTravelersPagination();
   }
 
   window.addEventListener('load', () => {

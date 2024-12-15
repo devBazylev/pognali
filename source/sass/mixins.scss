@@ -138,3 +138,9 @@
     background-image: url("https://hhcdn.ru/ichameleon/#{$name}.svg");
   }
 }
+
+@mixin vp-tablet {
+  @media (min-width: $vp-768) and (max-width: ($vp-1024 - 1px)) {
+    @content;
+  }
+}
