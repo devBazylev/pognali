@@ -129,6 +129,21 @@ const initLand = () => {
   });
 
   filterCountries();
+
+  const checkMob = () => {
+    if (mob.matches) {
+      filterCountries();
+    }
+  };
+
+  const checkTab = () => {
+    if (tab.matches) {
+      filterCountries();
+    }
+  };
+
+  mob.addListener(checkMob);
+  tab.addListener(checkTab);
 };
 
 export {initLand};
