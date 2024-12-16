@@ -2,9 +2,9 @@
   width: 100%;
   margin-bottom: 31px;
   overflow: hidden;
-  border-radius: 20px;
   min-width: 0;
-  transition: box-shadow 0.3s linear;
+
+  border-radius: 20px;
 
   @include vp-1023 {
     min-width: 0;
@@ -28,7 +28,6 @@
     width: 100%;
     background: $color-default-white;
     border-radius: 20px;
-    overflow: hidden;
 
     @include vp-1023 {
       display: grid;
@@ -44,6 +43,7 @@
       column-gap: 15px;
       grid-template-columns: 70px 1fr;
       grid-template-rows: min-content min-content min-content min-content;
+
       height: auto;
     }
   }
@@ -200,15 +200,31 @@
     }
   }
 
+  &:nth-child(4) {
+    .traveler-card__likes {
+      @include vp-1023 {
+        margin-top: 16px;
+      }
+
+      @include vp-767 {
+        margin: 0;
+      }
+    }
+  }
+
   &__likes-icon {
     position: relative;
     width: 50px;
     height: 50px;
+    padding: 0;
+    border: none;
     border-radius: 50%;
-    background: $color-button-business;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
     @include vp-1023 {
       width: 57px;
@@ -227,10 +243,28 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      opacity: 0.3;
+      transition: opacity 0.3s;
 
       @include vp-767 {
         width: 12px;
         height: 12px;
+      }
+    }
+
+    @include hover-focus {
+      background: $color-button-business;
+
+      img {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      background: $color-button-business;
+
+      img {
+        opacity: 0.1;
       }
     }
   }

@@ -39,11 +39,10 @@
   }
 
   @include vp-1023 {
-    margin-top: -60px;
-    padding: 103px 0 136px;
+    padding: 143px 16px 123px;
   }
 
   @include vp-767 {
-    padding: 81px 0 106px;
+    padding: 121px 9px 106px;
   }
 }
