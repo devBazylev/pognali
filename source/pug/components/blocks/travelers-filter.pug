@@ -18,9 +18,32 @@ mixin travelers-filter()
       }
     ]
 
+    const transportItems = [
+      {
+        id: "plane",
+        text: "Авиаперелет",
+        checked: true
+      },
+      {
+        id: "car",
+        text: "Автотранспорт",
+        checked: true
+      },
+      {
+        id: "bicycle",
+        text: "Велосипед",
+        checked: false
+      },
+      {
+        id: "walk",
+        text: "Пешком",
+        checked: true
+      }
+    ]
+
   .travelers-filter.container(data-travelers-filter)
     h2.travelers-filter__title Подберите идеального попутчика
-    form.travelers-filter__form
+    form.travelers-filter__form(action="https://echo.htmlacademy.ru/", method="get")
       each section in filterSections
         .travelers-filter__section(data-filter-section)
           .travelers-filter__header
@@ -44,13 +67,15 @@ mixin travelers-filter()
           button.travelers-filter__toggle(type="button", aria-label="Развернуть", data-filter-toggle)
             +icon("arrow")(width="10", height="6")
         ul.travelers-filter__transport(data-filter-list)
-          - const checkedTransport = ["plane", "car", "walk"]
-          each transport in ["plane", "car", "bicycle", "walk"]
+          each item in transportItems
             li.travelers-filter__transport-item
               .travelers-filter__transport-checkbox
-                input(type="checkbox", id=`transport-${transport}`, name="transport", value=transport, checked=checkedTransport.includes(transport))
-                label.travelers-filter__transport-checkbox-label(for=`transport-${transport}`)
-                  +img2("svg", transport, "svg", 23, 22, "")
+                - const transportId = `transport-${item.id}`
+                input(type="checkbox", id=transportId, name="transport", value=item.id, checked=item.checked, aria-label=item.text)
+                label.travelers-filter__transport-checkbox-label(for=transportId)
+                  span.visually-hidden= item.text
+                  +img2("svg", item.id, "svg", 23, 22, alt=item.text)
+                  span.travelers-filter__transport-text= item.text
 
       .travelers-filter__section.travelers-filter__section--level(data-filter-section)
         .travelers-filter__header
@@ -59,12 +84,11 @@ mixin travelers-filter()
             +icon("arrow")(width="10", height="6")
         .travelers-filter__level(data-filter-list)
           .travelers-filter__values
-            span.travelers-filter__value 30
-            span.travelers-filter__value 100
+            input.travelers-filter__value(type="number", min="0", max="100", value="30", id="level-min", aria-label="Минимальный уровень")
+            input.travelers-filter__value(type="number", min="0", max="100", value="100", id="level-max", aria-label="Максимальный уровень")
           .travelers-filter__slider
             .travelers-filter__range-slider
-              input.travelers-filter__range-min(type="range", min="0", max="100", value="30")
-              input.travelers-filter__range-max(type="range", min="0", max="100", value="100")
-
+              input.travelers-filter__range-min(type="range", min="0", max="100", value="30", aria-label="Ползунок минимального уровня")
+              input.travelers-filter__range-max(type="range", min="0", max="100", value="100", aria-label="Ползунок максимального уровня")
 
       button.travelers-filter__submit(type="submit") Показать

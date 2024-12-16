@@ -34,9 +34,26 @@ class TravelersFilter {
       section.classList.add('is-open');
     }
 
+    header.setAttribute('tabindex', '0');
+
     header.addEventListener('click', () => {
       section.classList.toggle('is-open');
     });
+
+    header.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Enter' || evt.key === ' ') {
+        evt.preventDefault();
+        section.classList.toggle('is-open');
+      }
+    });
+
+    const toggle = header.querySelector('.travelers-filter__toggle');
+    if (toggle) {
+      toggle.setAttribute('tabindex', '-1');
+      toggle.addEventListener('click', (evt) => {
+        evt.stopPropagation();
+      });
+    }
   }
 
   initLevelFilter() {
