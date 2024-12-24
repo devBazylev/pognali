@@ -265,7 +265,7 @@
     @include vp-tablet {
       display: grid;
       grid-template-columns: repeat(3, 167px);
-      gap: 4px;
+      gap: 25px 4px;
       margin: 0;
       margin-left: auto;
       align-self: center;
