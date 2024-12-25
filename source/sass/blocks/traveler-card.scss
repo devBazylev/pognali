@@ -252,14 +252,15 @@
       }
     }
 
-    @include hover-focus {
+    &:hover {
       background: $color-button-business;
 
       img {
-        opacity: 1;
+        opacity: 0.5;
       }
     }
 
+    &:focus,
     &:active {
       background: $color-button-business;
 
