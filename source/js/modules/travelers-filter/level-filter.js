@@ -58,8 +58,18 @@ export class LevelFilter {
       }
     };
 
+    this.maxInput.addEventListener('input', (e) => {
+      const minValue = parseInt(this.minInput.value, 10);
+      const maxValue = parseInt(e.target.value, 10);
+
+      if (maxValue < minValue) {
+        e.target.value = minValue;
+        this.valueElements[1].value = minValue.toString();
+      }
+      updateRange();
+    });
+
     this.minInput.addEventListener('input', updateRange);
-    this.maxInput.addEventListener('input', updateRange);
 
     this.valueElements[0].addEventListener('input', () => updateFromTextInput(0, false));
     this.valueElements[1].addEventListener('input', () => updateFromTextInput(1, false));
