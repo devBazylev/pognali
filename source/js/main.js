@@ -27,7 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
   }
-
   if (currentPage === indexHtml) {
     initIntro();
     initServ();
@@ -35,13 +34,11 @@ window.addEventListener('DOMContentLoaded', () => {
     initAdd();
     initPry();
   }
-
   if (currentPage === catalogHtml) {
     initLand();
     initTravelersFilter();
     initTravelersPagination();
   }
-
   window.addEventListener('load', () => {
 
   });
